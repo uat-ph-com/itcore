@@ -11,22 +11,1337 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Cairo:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/FztCXZhr/Whats-App-Image-2025-10-04-at-1-59-02-AM.jpg">
+    <link rel="icon" type="image/jpeg"
+        href="https://i.postimg.cc/FztCXZhr/Whats-App-Image-2025-10-04-at-1-59-02-AM.jpg">
     <!-- style -->
     <!--<link rel="stylesheet" crossorigin href="style.css">-->
     <style>
-        /*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
-        @layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-border-style:solid;--tw-gradient-position:initial;--tw-gradient-from:#0000;--tw-gradient-via:#0000;--tw-gradient-to:#0000;--tw-gradient-stops:initial;--tw-gradient-via-stops:initial;--tw-gradient-from-position:0%;--tw-gradient-via-position:50%;--tw-gradient-to-position:100%;--tw-leading:initial;--tw-font-weight:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial}}}@layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--color-red-600:oklch(57.7% .245 27.325);--color-red-700:oklch(50.5% .213 27.518);--color-red-800:oklch(44.4% .177 26.899);--color-blue-600:oklch(54.6% .245 262.881);--color-neutral-900:oklch(20.5% 0 0);--color-white:#fff;--spacing:.25rem;--text-xs:.75rem;--text-xs--line-height:calc(1 / .75);--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-base:1rem;--text-base--line-height:calc(1.5 / 1);--text-lg:1.125rem;--text-lg--line-height:calc(1.75 / 1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75 / 1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2 / 1.5);--text-3xl:1.875rem;--text-3xl--line-height:calc(2.25 / 1.875);--text-4xl:2.25rem;--text-4xl--line-height:calc(2.5 / 2.25);--text-5xl:3rem;--text-5xl--line-height:1;--text-7xl:4.5rem;--text-7xl--line-height:1;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-black:900;--radius-xs:.125rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-2xl:1rem;--radius-3xl:1.5rem;--blur-xs:4px;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.visible{visibility:visible}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:calc(var(--spacing) * 0)}.start{inset-inline-start:var(--spacing)}.top-0{top:calc(var(--spacing) * 0)}.top-\[33px\]{top:33px}.top-\[34\.59px\]{top:34.59px}.top-\[39px\]{top:39px}.top-\[61\.39px\]{top:61.39px}.top-\[80px\]{top:80px}.top-\[83\.78px\]{top:83.78px}.top-\[137px\]{top:137px}.top-\[180\.79px\]{top:180.79px}.top-\[180\.80px\]{top:180.8px}.top-\[181\.09px\]{top:181.09px}.top-\[209\.79px\]{top:209.79px}.top-\[210\.09px\]{top:210.09px}.top-\[210px\]{top:210px}.top-\[376\.78px\]{top:376.78px}.top-\[510\.56px\]{top:510.56px}.top-\[576px\]{top:576px}.top-\[727\.97px\]{top:727.97px}.top-\[1104\.75px\]{top:1104.75px}.top-\[1140px\]{top:1140px}.top-\[1280px\]{top:1280px}.top-\[1455\.94px\]{top:1455.94px}.top-\[2034\.06px\]{top:2034.06px}.top-\[4169\.72px\]{top:4169.72px}.top-\[5510\.41px\]{top:5510.41px}.top-\[6377\.69px\]{top:6377.69px}.left-0{left:calc(var(--spacing) * 0)}.left-\[24px\]{left:24px}.left-\[33px\]{left:33px}.left-\[127\.63px\]{left:127.63px}.left-\[128\.83px\]{left:128.83px}.left-\[142\.92px\]{left:142.92px}.left-\[155\.59px\]{left:155.59px}.left-\[397\.33px\]{left:397.33px}.left-\[794\.66px\]{left:794.66px}.left-\[912px\]{left:912px}.left-\[1848px\]{left:1848px}.z-50{z-index:50}.container{width:100%}@media (width>=40rem){.container{max-width:40rem}}@media (width>=48rem){.container{max-width:48rem}}@media (width>=64rem){.container{max-width:64rem}}@media (width>=80rem){.container{max-width:80rem}}@media (width>=96rem){.container{max-width:96rem}}.mx-auto{margin-inline:auto}.mt-2{margin-top:calc(var(--spacing) * 2)}.mt-4{margin-top:calc(var(--spacing) * 4)}.mb-2{margin-bottom:calc(var(--spacing) * 2)}.mb-4{margin-bottom:calc(var(--spacing) * 4)}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline-flex{display:inline-flex}.table{display:table}.size-3{width:calc(var(--spacing) * 3);height:calc(var(--spacing) * 3)}.size-12{width:calc(var(--spacing) * 12);height:calc(var(--spacing) * 12)}.size-20{width:calc(var(--spacing) * 20);height:calc(var(--spacing) * 20)}.h-1{height:calc(var(--spacing) * 1)}.h-3{height:calc(var(--spacing) * 3)}.h-7{height:calc(var(--spacing) * 7)}.h-12{height:calc(var(--spacing) * 12)}.h-16{height:calc(var(--spacing) * 16)}.h-20{height:calc(var(--spacing) * 20)}.h-32{height:calc(var(--spacing) * 32)}.h-48{height:calc(var(--spacing) * 48)}.h-72{height:calc(var(--spacing) * 72)}.h-80{height:calc(var(--spacing) * 80)}.h-96{height:calc(var(--spacing) * 96)}.h-\[478\.56px\]{height:478.56px}.h-\[481\.16px\]{height:481.16px}.h-\[600px\]{height:600px}.h-\[989\.13px\]{height:989.13px}.h-\[1200px\]{height:1200px}.h-\[1749\.53px\]{height:1749.53px}.h-\[6710\.25px\]{height:6710.25px}.h-full{height:100%}.w-12{width:calc(var(--spacing) * 12)}.w-20{width:calc(var(--spacing) * 20)}.w-24{width:calc(var(--spacing) * 24)}.w-64{width:calc(var(--spacing) * 64)}.w-72{width:calc(var(--spacing) * 72)}.w-96{width:calc(var(--spacing) * 96)}.w-\[600px\]{width:600px}.w-\[672px\]{width:672px}.w-\[1280px\]{width:1280px}.w-fit{width:fit-content}.w-full{width:100%}.max-w-\[600px\]{max-width:600px}.max-w-\[672px\]{max-width:672px}.max-w-\[1200px\]{max-width:1200px}.max-w-\[1280px\]{max-width:1280px}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.resize{resize:both}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.content-center{align-content:center}.items-center{align-items:center}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-start{justify-content:flex-start}.gap-2{gap:calc(var(--spacing) * 2)}.gap-3{gap:calc(var(--spacing) * 3)}.gap-3\.5{gap:calc(var(--spacing) * 3.5)}.gap-4{gap:calc(var(--spacing) * 4)}.gap-6{gap:calc(var(--spacing) * 6)}.gap-8{gap:calc(var(--spacing) * 8)}.gap-16{gap:calc(var(--spacing) * 16)}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3\.5>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 3.5) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-4>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-6>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)))}.self-stretch{align-self:stretch}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:var(--radius-2xl)}.rounded-3xl{border-radius:var(--radius-3xl)}.rounded-\[20px\]{border-radius:20px}.rounded-\[40px\]{border-radius:40px}.rounded-\[50px\]{border-radius:50px}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-xs{border-radius:var(--radius-xs)}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.bg-neutral-900{background-color:var(--color-neutral-900)}.bg-red-600{background-color:var(--color-red-600)}.bg-red-700{background-color:var(--color-red-700)}.bg-red-700\/30{background-color:#bf000f4d}@supports (color:color-mix(in lab, red, red)){.bg-red-700\/30{background-color:color-mix(in oklab, var(--color-red-700) 30%, transparent)}}.bg-white{background-color:var(--color-white)}.bg-white\/10{background-color:#ffffff1a}@supports (color:color-mix(in lab, red, red)){.bg-white\/10{background-color:color-mix(in oklab, var(--color-white) 10%, transparent)}}.bg-linear-65{--tw-gradient-position:65deg}@supports (background-image:linear-gradient(in lab, red, red)){.bg-linear-65{--tw-gradient-position:65deg in oklab}}.bg-linear-65{background-image:linear-gradient(var(--tw-gradient-stops))}.bg-linear-80{--tw-gradient-position:80deg}@supports (background-image:linear-gradient(in lab, red, red)){.bg-linear-80{--tw-gradient-position:80deg in oklab}}.bg-linear-80{background-image:linear-gradient(var(--tw-gradient-stops))}.bg-gradient-to-br{--tw-gradient-position:to bottom right in oklab;background-image:linear-gradient(var(--tw-gradient-stops))}.bg-gradient-to-r{--tw-gradient-position:to right in oklab;background-image:linear-gradient(var(--tw-gradient-stops))}.from-red-600{--tw-gradient-from:var(--color-red-600);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))}.to-red-800{--tw-gradient-to:var(--color-red-800);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))}.object-cover{object-fit:cover}.p-6{padding:calc(var(--spacing) * 6)}.p-10{padding:calc(var(--spacing) * 10)}.px-3{padding-inline:calc(var(--spacing) * 3)}.px-4{padding-inline:calc(var(--spacing) * 4)}.px-5{padding-inline:calc(var(--spacing) * 5)}.px-6{padding-inline:calc(var(--spacing) * 6)}.px-8{padding-inline:calc(var(--spacing) * 8)}.px-10{padding-inline:calc(var(--spacing) * 10)}.px-80{padding-inline:calc(var(--spacing) * 80)}.px-96{padding-inline:calc(var(--spacing) * 96)}.py-1{padding-block:calc(var(--spacing) * 1)}.py-1\.5{padding-block:calc(var(--spacing) * 1.5)}.py-4{padding-block:calc(var(--spacing) * 4)}.py-5{padding-block:calc(var(--spacing) * 5)}.py-20{padding-block:calc(var(--spacing) * 20)}.py-\[4\.80px\]{padding-block:4.8px}.pt-0{padding-top:calc(var(--spacing) * 0)}.pt-0\.5{padding-top:calc(var(--spacing) * .5)}.pt-2{padding-top:calc(var(--spacing) * 2)}.pt-4{padding-top:calc(var(--spacing) * 4)}.pt-8{padding-top:calc(var(--spacing) * 8)}.pt-10{padding-top:calc(var(--spacing) * 10)}.pt-12{padding-top:calc(var(--spacing) * 12)}.pt-\[1\.50px\]{padding-top:1.5px}.pb-2{padding-bottom:calc(var(--spacing) * 2)}.pb-6{padding-bottom:calc(var(--spacing) * 6)}.pb-28{padding-bottom:calc(var(--spacing) * 28)}.pb-\[0\.59px\]{padding-bottom:.59px}.pb-\[0\.69px\]{padding-bottom:.69px}.pb-\[0\.80px\]{padding-bottom:.8px}.pb-\[2\.50px\]{padding-bottom:2.5px}.pb-px{padding-bottom:1px}.text-center{text-align:center}.font-\[\'Font_Awesome_5_Brands\'\]{font-family:"Font Awesome 5 Brands"}.font-\[\'Font_Awesome_5_Free\'\]{font-family:"Font Awesome 5 Free"}.font-\[\'Inter\'\]{font-family:Inter}.text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-4xl{font-size:var(--text-4xl);line-height:var(--tw-leading,var(--text-4xl--line-height))}.text-5xl{font-size:var(--text-5xl);line-height:var(--tw-leading,var(--text-5xl--line-height))}.text-7xl{font-size:var(--text-7xl);line-height:var(--tw-leading,var(--text-7xl--line-height))}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\[10\.4px\],.text-\[10\.40px\]{font-size:10.4px}.leading-4{--tw-leading:calc(var(--spacing) * 4);line-height:calc(var(--spacing) * 4)}.leading-5{--tw-leading:calc(var(--spacing) * 5);line-height:calc(var(--spacing) * 5)}.leading-6{--tw-leading:calc(var(--spacing) * 6);line-height:calc(var(--spacing) * 6)}.leading-7{--tw-leading:calc(var(--spacing) * 7);line-height:calc(var(--spacing) * 7)}.leading-8{--tw-leading:calc(var(--spacing) * 8);line-height:calc(var(--spacing) * 8)}.leading-9{--tw-leading:calc(var(--spacing) * 9);line-height:calc(var(--spacing) * 9)}.font-black{--tw-font-weight:var(--font-weight-black);font-weight:var(--font-weight-black)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.text-blue-600{color:var(--color-blue-600)}.underline{text-decoration-line:underline}.opacity-0{opacity:0}.shadow-\[0px_10px_30px_0px_rgba\(0\,0\,0\,0\.30\)\]{--tw-shadow:0px 10px 30px 0px var(--tw-shadow-color,#0000004d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_10px_30px_0px_rgba\(24\,119\,242\,0\.30\)\]{--tw-shadow:0px 10px 30px 0px var(--tw-shadow-color,#1877f24d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_10px_30px_0px_rgba\(37\,211\,102\,0\.30\)\]{--tw-shadow:0px 10px 30px 0px var(--tw-shadow-color,#25d3664d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_10px_30px_0px_rgba\(197\,18\,18\,0\.30\)\]{--tw-shadow:0px 10px 30px 0px var(--tw-shadow-color,#c512124d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_15px_40px_0px_rgba\(0\,0\,0\,0\.30\)\]{--tw-shadow:0px 15px 40px 0px var(--tw-shadow-color,#0000004d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_20px_60px_0px_rgba\(0\,0\,0\,0\.30\)\]{--tw-shadow:0px 20px 60px 0px var(--tw-shadow-color,#0000004d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.outline,.outline-1{outline-style:var(--tw-outline-style);outline-width:1px}.outline-offset-\[-1px\]{outline-offset:-1px}.outline-red-600{outline-color:var(--color-red-600)}.outline-red-700{outline-color:var(--color-red-700)}.outline-red-700\/30{outline-color:#bf000f4d}@supports (color:color-mix(in lab, red, red)){.outline-red-700\/30{outline-color:color-mix(in oklab, var(--color-red-700) 30%, transparent)}}.outline-white{outline-color:var(--color-white)}.outline-white\/20{outline-color:#fff3}@supports (color:color-mix(in lab, red, red)){.outline-white\/20{outline-color:color-mix(in oklab, var(--color-white) 20%, transparent)}}.blur{--tw-blur:blur(8px);filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.backdrop-blur-\[6px\]{--tw-backdrop-blur:blur(6px);-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.backdrop-blur-xs{--tw-backdrop-blur:blur(var(--blur-xs));-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}@media (width>=48rem){.md\:h-\[800px\]{height:800px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:text-7xl{font-size:var(--text-7xl);line-height:var(--tw-leading,var(--text-7xl--line-height))}}@media (width>=64rem){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}}body{margin:0}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-gradient-position{syntax:"*";inherits:false}@property --tw-gradient-from{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-via{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-to{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-stops{syntax:"*";inherits:false}@property --tw-gradient-via-stops{syntax:"*";inherits:false}@property --tw-gradient-from-position{syntax:"<length-percentage>";inherits:false;initial-value:0%}@property --tw-gradient-via-position{syntax:"<length-percentage>";inherits:false;initial-value:50%}@property --tw-gradient-to-position{syntax:"<length-percentage>";inherits:false;initial-value:100%}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}:root{--primary:#d41111;--primary-dark:#a50d0d;--primary-light:#ee2b2b;--black:#141414;--dark-bg:#1f1f1f;--darker-bg:#0d0d0d;--foreground:#f2f2f2;--border:#333;--gray:#737373}html{scroll-behavior:smooth}.container{max-width:1200px;margin:0 auto;padding:0 20px}.btn-primary{background-color:var(--primary);color:#fff;cursor:pointer;border:none;border-radius:.5rem;padding:1rem 2.5rem;font-size:1.125rem;font-weight:600;transition:all .2s}.btn-primary:hover{background-color:var(--primary-dark);transform:translateY(-2px);box-shadow:0 10px 30px #c5121266}.navbar{z-index:1000;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--primary);background:#0d0d0df2;position:fixed;top:0;left:0;right:0}.navbar-container{justify-content:space-between;align-items:center;max-width:1280px;height:80px;margin:0 auto;padding:0 1.5rem;display:flex}.nav-menu{gap:2rem;list-style:none;display:none}.nav-menu.show{text-align:center;background:#000;flex-direction:column;width:100%;height:auto;padding:35px;display:flex;position:absolute;top:calc(100% + 1px);left:0}.nav-menu a{color:var(--foreground);font-weight:500;text-decoration:none;transition:color .2s}.nav-menu a:hover{color:var(--primary)}.nav-right{align-items:center;gap:1rem;display:flex}.logo{align-items:center;gap:.75rem;display:flex}.logo-image{object-fit:cover;border:2px solid var(--primary);border-radius:50%;width:50px;height:50px}.logo-text{flex-direction:column;display:flex}.logo-name{color:var(--primary);font-size:1.5rem;font-weight:700}.logo-subtitle{color:#fff9;font-size:.65rem}.social-links{gap:1rem;display:flex}.social-links a{color:var(--foreground);font-size:1.2rem;transition:color .2s}.social-links a:hover{color:var(--primary)}.menu-toggle{color:var(--foreground);cursor:pointer;background:0 0;border:none;font-size:1.5rem;display:block}.lang-toggle{color:#fff;cursor:pointer;background:#ffffff1a;border:1px solid #fff3;border-radius:50px;align-items:center;gap:.5rem;padding:.4rem 1rem;font-size:.9rem;transition:all .3s;display:flex}.lang-toggle:hover{background:var(--primary);border-color:var(--primary)}.lang-toggle i{font-size:1rem}@media (width>=1024px){.nav-menu{display:flex!important}.nav-menu.show{flex-direction:unset;background:unset;position:unset;height:unset;width:unset;display:flex!important}.menu-toggle{display:none}}.hero-slider{height:100vh;margin-top:80px;position:relative;overflow:hidden}.slide{opacity:0;transition:opacity .5s ease-in-out;position:absolute;inset:0}.slide.active{opacity:1}.slide-image{object-fit:cover;width:100%;height:100%}.slide-overlay{background:linear-gradient(90deg,#0d0d0de6 0%,#c512124d 50%,#0d0d0de6 100%);position:absolute;inset:0}[dir=rtl] .slide-overlay{background:linear-gradient(270deg,#0d0d0de6 0%,#c512124d 50%,#0d0d0de6 100%)}.slide-content{align-items:center;display:flex;position:absolute;inset:0}.slide-inner{width:100%;max-width:1280px;margin:0 auto;padding:0 1.5rem}.slide-text{max-width:42rem}.slide-title{color:#fff;margin-bottom:1.5rem;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700}.slide-title .highlight{color:var(--primary)}.slide-description{color:#ffffffe6;margin-bottom:2rem;font-size:clamp(1rem,2vw,1.25rem);line-height:1.8}.slider-arrow{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--primary);color:#fff;cursor:pointer;z-index:10;background:#c512124d;border-radius:50%;justify-content:center;align-items:center;width:48px;height:48px;font-size:1.5rem;transition:all .2s;display:flex;position:absolute;top:50%;transform:translateY(-50%)}.slider-arrow:hover{background:var(--primary)}.slider-arrow.prev{left:1.5rem}.slider-arrow.next{right:1.5rem}[dir=rtl] .slider-arrow.prev{left:auto;right:1.5rem}[dir=rtl] .slider-arrow.next{left:1.5rem;right:auto}.slider-dots{z-index:10;gap:.75rem;display:flex;position:absolute;bottom:3rem;left:50%;transform:translate(-50%)}.dot{cursor:pointer;background:#fff6;border:none;border-radius:50%;width:12px;height:12px;transition:all .3s}.dot.active{background:var(--primary);border-radius:6px;width:48px}.about-section{background:var(--dark-bg);padding:5rem 0}.section-header{text-align:center;margin-bottom:4rem}.section-title{color:#fff;margin-bottom:1rem;font-size:2.5rem;font-weight:900}.section-divider{background:var(--primary);border-radius:2px;width:6rem;height:4px;margin:0 auto 1.5rem}.section-subtitle{color:var(--gray);max-width:600px;margin:0 auto;font-size:1.2rem;line-height:1.8}.about-grid{grid-template-columns:1fr 1fr;align-items:center;gap:4rem;margin-top:3rem;display:grid}.about-subtitle{color:var(--primary);margin:2rem 0 1rem;font-size:1.5rem;font-weight:700}.about-description{color:#ffffffb3;margin-bottom:1.5rem;font-size:1.1rem;line-height:1.8}.stats-grid{grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;display:grid}.stat-card{background:linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);color:#fff;text-align:center;border:1px solid #c512124d;border-radius:15px;padding:1.5rem;box-shadow:0 10px 30px #c512124d}.stat-number{color:#fff;font-size:2.5rem;font-weight:900}.stat-label{margin-top:.5rem;font-size:.9rem}@media (width<=768px){.about-grid,.stats-grid{grid-template-columns:1fr}}.services-section{background:var(--black);padding:5rem 0}.services-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:3rem;display:grid}.service-card{background:var(--dark-bg);border:1px solid #c512124d;border-radius:20px;padding:2rem;transition:all .3s;box-shadow:0 15px 40px #0000004d}.service-card:hover{border-color:var(--primary);transform:translateY(-10px);box-shadow:0 25px 60px #c5121266}.service-icon{background:linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);border-radius:50%;justify-content:center;align-items:center;width:80px;height:80px;margin-bottom:1.5rem;display:flex}.service-icon i{color:#fff;font-size:2rem}.service-title{color:#fff;margin-bottom:1rem;font-size:1.5rem;font-weight:700}.service-description{color:#ffffffb3;margin-bottom:1.5rem;line-height:1.6}@media (width<=768px){.services-grid{grid-template-columns:1fr}}.projects-section{background:var(--dark-bg);padding:5rem 0}.projects-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;display:grid}.project-card{background:var(--black);border:1px solid #c512124d;border-radius:20px;transition:all .3s;overflow:hidden;box-shadow:0 10px 30px #0000004d}.project-card:hover{border-color:var(--primary);transform:translateY(-5px);box-shadow:0 20px 50px #c5121266}.project-image{height:200px;overflow:hidden}.project-image img{object-fit:cover;width:100%;height:100%;transition:transform .3s}.project-card:hover .project-image img{transform:scale(1.05)}.project-content{padding:1.5rem}.project-title{color:#fff;margin-bottom:1rem;font-size:1.3rem;font-weight:700}.project-description{color:#ffffffb3;margin-bottom:1.5rem;line-height:1.6}.project-tags{flex-wrap:wrap;gap:.5rem;display:flex}.project-tag{color:var(--primary-light);background:#c5121233;border:1px solid #c512124d;border-radius:20px;padding:.3rem .8rem;font-size:.8rem;font-weight:600}.contact-section{background:var(--black);padding:5rem 0}.contact-grid{grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;display:grid}.contact-info h3{color:#fff;margin-bottom:1rem;font-size:2rem;font-weight:700}.contact-info p{color:#ffffffb3;margin-bottom:2rem;font-size:1.1rem;line-height:1.8}.contact-items{flex-direction:column;gap:1.5rem;display:flex}.contact-item{align-items:flex-start;gap:1rem;display:flex}.contact-icon{background:var(--primary);border-radius:50%;flex-shrink:0;justify-content:center;align-items:center;width:50px;height:50px;display:flex}.contact-icon i{color:#fff;font-size:1.2rem}.contact-details h4{color:#fff;margin-bottom:.5rem;font-weight:600}.contact-details p{color:#ffffffb3;margin:0;font-size:1rem}.contact-details p a:hover{color:var(--primary)!important}.contact-details:has(.contactPhone) p a{color:#ffffffb3;text-decoration:none;transition:color .2s}.contact-details:has(.contactEmail) p a{color:#ffffffb3;text-decoration:none;transition:color .2s}.contact-form{background:var(--dark-bg);border:1px solid #c512124d;border-radius:20px;padding:2.5rem;box-shadow:0 20px 60px #0000004d}.contact-form .wrapper{flex-direction:column;gap:1.5rem;padding:2.5rem;display:flex}.contact-form .wrapper a{text-decoration:none}.contact-form .wrapper a button{color:#fff;cursor:pointer;border:none;border-radius:15px;justify-content:center;align-items:center;gap:1rem;width:100%;padding:1.25rem 2rem;font-size:1.2rem;font-weight:700;transition:all .3s;display:flex}.contact-form .wrapper a button i{font-size:1.8rem}.contact-form .wrapper a.contact-facebook button{background:linear-gradient(135deg,#1877f2 0%,#0d5dbf 100%);transform:translateY(0);box-shadow:0 10px 30px #1877f24d}.contact-form .wrapper a.contact-facebook button:hover{transform:translateY(-5px);box-shadow:0 15px 40px #1877f280}.contact-form .wrapper a.contact-whatsapp button{background:linear-gradient(135deg,#25d366 0%,#1da851 100%);transform:translateY(0);box-shadow:0 10px 30px #25d3664d}.contact-form .wrapper a.contact-whatsapp button:hover{transform:translateY(-5px);box-shadow:0 15px 40px #25d36680}.contact-form .wrapper a.contact-phone button{background:linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);box-shadow:0 10px 30px #c512124d}.form-group{margin-bottom:1.5rem}.form-group label{color:#fff;margin-bottom:.5rem;font-weight:600;display:block}.form-group input,.form-group select,.form-group textarea{color:#fff;background:#ffffff0d;border:1px solid #fff3;border-radius:8px;width:100%;padding:.75rem 1rem;font-size:1rem;transition:border-color .2s}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary);outline:none}.form-group textarea{resize:vertical;min-height:120px}.btn-submit{background:linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);color:#fff;cursor:pointer;border:none;border-radius:50px;width:100%;padding:1rem 2rem;font-size:1.2rem;font-weight:700;transition:all .3s}.btn-submit:hover{transform:scale(1.02);box-shadow:0 10px 30px #c5121280}@media (width<=768px){.contact-grid{grid-template-columns:1fr}}.footer{background:var(--darker-bg);color:#fff;border-top:1px solid var(--primary);padding:3rem 0 1.5rem}.footer-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem;display:grid}.footer-section h3{margin-bottom:1rem;font-size:1.25rem}.footer-section p{color:#ffffffb3;font-size:.875rem;line-height:1.6}.footer-section.company h3 span{color:var(--primary)}.footer-section.contact p a{color:#ffffffb3;text-decoration:none;transition:color .2s}.footer-links{list-style:none}.footer-links li{margin-bottom:.5rem}.footer-links a{color:#ffffffb3;font-size:.875rem;text-decoration:none;transition:color .2s}.footer-links a:hover{color:var(--primary)}.footer-bottom{border-top:1px solid #ffffff1a;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;padding-top:2rem;display:flex}.footer-bottom p{color:#fff9;font-size:.875rem}.footer-bottom div.pp-tnc{gap:1.5rem;display:flex}.footer-bottom div.pp-tnc a{color:#fff9;font-size:.875rem;text-decoration:none}.footer-social{gap:1rem;margin-top:1.5rem;display:flex}.footer-social a{color:#ffffffb3;font-size:1.25rem;transition:color .2s}.footer-social a:hover{color:var(--primary)}
+         /*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
+        @layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-border-style:solid;--tw-gradient-position:initial;--tw-gradient-from:#0000;--tw-gradient-via:#0000;--tw-gradient-to:#0000;--tw-gradient-stops:initial;--tw-gradient-via-stops:initial;--tw-gradient-from-position:0%;--tw-gradient-via-position:50%;--tw-gradient-to-position:100%;--tw-leading:initial;--tw-font-weight:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial}}}@layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--color-red-600:oklch(57.7% .245 27.325);--color-red-700:oklch(50.5% .213 27.518);--color-red-800:oklch(44.4% .177 26.899);--color-blue-600:oklch(54.6% .245 262.881);--color-neutral-900:oklch(20.5% 0 0);--color-white:#fff;--spacing:.25rem;--text-xs:.75rem;--text-xs--line-height:calc(1 / .75);--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-base:1rem;--text-base--line-height:calc(1.5 / 1);--text-lg:1.125rem;--text-lg--line-height:calc(1.75 / 1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75 / 1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2 / 1.5);--text-3xl:1.875rem;--text-3xl--line-height:calc(2.25 / 1.875);--text-4xl:2.25rem;--text-4xl--line-height:calc(2.5 / 2.25);--text-5xl:3rem;--text-5xl--line-height:1;--text-7xl:4.5rem;--text-7xl--line-height:1;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-black:900;--radius-xs:.125rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-2xl:1rem;--radius-3xl:1.5rem;--blur-xs:4px;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.visible{visibility:visible}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:calc(var(--spacing) * 0)}.start{inset-inline-start:var(--spacing)}.top-0{top:calc(var(--spacing) * 0)}.top-\[33px\]{top:33px}.top-\[34\.59px\]{top:34.59px}.top-\[39px\]{top:39px}.top-\[61\.39px\]{top:61.39px}.top-\[80px\]{top:80px}.top-\[83\.78px\]{top:83.78px}.top-\[137px\]{top:137px}.top-\[180\.79px\]{top:180.79px}.top-\[180\.80px\]{top:180.8px}.top-\[181\.09px\]{top:181.09px}.top-\[209\.79px\]{top:209.79px}.top-\[210\.09px\]{top:210.09px}.top-\[210px\]{top:210px}.top-\[376\.78px\]{top:376.78px}.top-\[510\.56px\]{top:510.56px}.top-\[576px\]{top:576px}.top-\[727\.97px\]{top:727.97px}.top-\[1104\.75px\]{top:1104.75px}.top-\[1140px\]{top:1140px}.top-\[1280px\]{top:1280px}.top-\[1455\.94px\]{top:1455.94px}.top-\[2034\.06px\]{top:2034.06px}.top-\[4169\.72px\]{top:4169.72px}.top-\[5510\.41px\]{top:5510.41px}.top-\[6377\.69px\]{top:6377.69px}.left-0{left:calc(var(--spacing) * 0)}.left-\[24px\]{left:24px}.left-\[33px\]{left:33px}.left-\[127\.63px\]{left:127.63px}.left-\[128\.83px\]{left:128.83px}.left-\[142\.92px\]{left:142.92px}.left-\[155\.59px\]{left:155.59px}.left-\[397\.33px\]{left:397.33px}.left-\[794\.66px\]{left:794.66px}.left-\[912px\]{left:912px}.left-\[1848px\]{left:1848px}.z-50{z-index:50}.container{width:100%}@media (width>=40rem){.container{max-width:40rem}}@media (width>=48rem){.container{max-width:48rem}}@media (width>=64rem){.container{max-width:64rem}}@media (width>=80rem){.container{max-width:80rem}}@media (width>=96rem){.container{max-width:96rem}}.mx-auto{margin-inline:auto}.mt-2{margin-top:calc(var(--spacing) * 2)}.mt-4{margin-top:calc(var(--spacing) * 4)}.mb-2{margin-bottom:calc(var(--spacing) * 2)}.mb-4{margin-bottom:calc(var(--spacing) * 4)}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline-flex{display:inline-flex}.table{display:table}.size-3{width:calc(var(--spacing) * 3);height:calc(var(--spacing) * 3)}.size-12{width:calc(var(--spacing) * 12);height:calc(var(--spacing) * 12)}.size-20{width:calc(var(--spacing) * 20);height:calc(var(--spacing) * 20)}.h-1{height:calc(var(--spacing) * 1)}.h-3{height:calc(var(--spacing) * 3)}.h-7{height:calc(var(--spacing) * 7)}.h-12{height:calc(var(--spacing) * 12)}.h-16{height:calc(var(--spacing) * 16)}.h-20{height:calc(var(--spacing) * 20)}.h-32{height:calc(var(--spacing) * 32)}.h-48{height:calc(var(--spacing) * 48)}.h-72{height:calc(var(--spacing) * 72)}.h-80{height:calc(var(--spacing) * 80)}.h-96{height:calc(var(--spacing) * 96)}.h-\[478\.56px\]{height:478.56px}.h-\[481\.16px\]{height:481.16px}.h-\[600px\]{height:600px}.h-\[989\.13px\]{height:989.13px}.h-\[1200px\]{height:1200px}.h-\[1749\.53px\]{height:1749.53px}.h-\[6710\.25px\]{height:6710.25px}.h-full{height:100%}.w-12{width:calc(var(--spacing) * 12)}.w-20{width:calc(var(--spacing) * 20)}.w-24{width:calc(var(--spacing) * 24)}.w-64{width:calc(var(--spacing) * 64)}.w-72{width:calc(var(--spacing) * 72)}.w-96{width:calc(var(--spacing) * 96)}.w-\[600px\]{width:600px}.w-\[672px\]{width:672px}.w-\[1280px\]{width:1280px}.w-fit{width:fit-content}.w-full{width:100%}.max-w-\[600px\]{max-width:600px}.max-w-\[672px\]{max-width:672px}.max-w-\[1200px\]{max-width:1200px}.max-w-\[1280px\]{max-width:1280px}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.resize{resize:both}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.content-center{align-content:center}.items-center{align-items:center}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-start{justify-content:flex-start}.gap-2{gap:calc(var(--spacing) * 2)}.gap-3{gap:calc(var(--spacing) * 3)}.gap-3\.5{gap:calc(var(--spacing) * 3.5)}.gap-4{gap:calc(var(--spacing) * 4)}.gap-6{gap:calc(var(--spacing) * 6)}.gap-8{gap:calc(var(--spacing) * 8)}.gap-16{gap:calc(var(--spacing) * 16)}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3\.5>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 3.5) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-4>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-6>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)))}.self-stretch{align-self:stretch}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:var(--radius-2xl)}.rounded-3xl{border-radius:var(--radius-3xl)}.rounded-\[20px\]{border-radius:20px}.rounded-\[40px\]{border-radius:40px}.rounded-\[50px\]{border-radius:50px}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-xs{border-radius:var(--radius-xs)}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.bg-neutral-900{background-color:var(--color-neutral-900)}.bg-red-600{background-color:var(--color-red-600)}.bg-red-700{background-color:var(--color-red-700)}.bg-red-700\/30{background-color:#bf000f4d}@supports (color:color-mix(in lab, red, red)){.bg-red-700\/30{background-color:color-mix(in oklab, var(--color-red-700) 30%, transparent)}}.bg-white{background-color:var(--color-white)}.bg-white\/10{background-color:#ffffff1a}@supports (color:color-mix(in lab, red, red)){.bg-white\/10{background-color:color-mix(in oklab, var(--color-white) 10%, transparent)}}.bg-linear-65{--tw-gradient-position:65deg}@supports (background-image:linear-gradient(in lab, red, red)){.bg-linear-65{--tw-gradient-position:65deg in oklab}}.bg-linear-65{background-image:linear-gradient(var(--tw-gradient-stops))}.bg-linear-80{--tw-gradient-position:80deg}@supports (background-image:linear-gradient(in lab, red, red)){.bg-linear-80{--tw-gradient-position:80deg in oklab}}.bg-linear-80{background-image:linear-gradient(var(--tw-gradient-stops))}.bg-gradient-to-br{--tw-gradient-position:to bottom right in oklab;background-image:linear-gradient(var(--tw-gradient-stops))}.bg-gradient-to-r{--tw-gradient-position:to right in oklab;background-image:linear-gradient(var(--tw-gradient-stops))}.from-red-600{--tw-gradient-from:var(--color-red-600);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))}.to-red-800{--tw-gradient-to:var(--color-red-800);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))}.object-cover{object-fit:cover}.p-6{padding:calc(var(--spacing) * 6)}.p-10{padding:calc(var(--spacing) * 10)}.px-3{padding-inline:calc(var(--spacing) * 3)}.px-4{padding-inline:calc(var(--spacing) * 4)}.px-5{padding-inline:calc(var(--spacing) * 5)}.px-6{padding-inline:calc(var(--spacing) * 6)}.px-8{padding-inline:calc(var(--spacing) * 8)}.px-10{padding-inline:calc(var(--spacing) * 10)}.px-80{padding-inline:calc(var(--spacing) * 80)}.px-96{padding-inline:calc(var(--spacing) * 96)}.py-1{padding-block:calc(var(--spacing) * 1)}.py-1\.5{padding-block:calc(var(--spacing) * 1.5)}.py-4{padding-block:calc(var(--spacing) * 4)}.py-5{padding-block:calc(var(--spacing) * 5)}.py-20{padding-block:calc(var(--spacing) * 20)}.py-\[4\.80px\]{padding-block:4.8px}.pt-0{padding-top:calc(var(--spacing) * 0)}.pt-0\.5{padding-top:calc(var(--spacing) * .5)}.pt-2{padding-top:calc(var(--spacing) * 2)}.pt-4{padding-top:calc(var(--spacing) * 4)}.pt-8{padding-top:calc(var(--spacing) * 8)}.pt-10{padding-top:calc(var(--spacing) * 10)}.pt-12{padding-top:calc(var(--spacing) * 12)}.pt-\[1\.50px\]{padding-top:1.5px}.pb-2{padding-bottom:calc(var(--spacing) * 2)}.pb-6{padding-bottom:calc(var(--spacing) * 6)}.pb-28{padding-bottom:calc(var(--spacing) * 28)}.pb-\[0\.59px\]{padding-bottom:.59px}.pb-\[0\.69px\]{padding-bottom:.69px}.pb-\[0\.80px\]{padding-bottom:.8px}.pb-\[2\.50px\]{padding-bottom:2.5px}.pb-px{padding-bottom:1px}.text-center{text-align:center}.font-\[\'Font_Awesome_5_Brands\'\]{font-family:"Font Awesome 5 Brands"}.font-\[\'Font_Awesome_5_Free\'\]{font-family:"Font Awesome 5 Free"}.font-\[\'Inter\'\]{font-family:Inter}.text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-4xl{font-size:var(--text-4xl);line-height:var(--tw-leading,var(--text-4xl--line-height))}.text-5xl{font-size:var(--text-5xl);line-height:var(--tw-leading,var(--text-5xl--line-height))}.text-7xl{font-size:var(--text-7xl);line-height:var(--tw-leading,var(--text-7xl--line-height))}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\[10\.4px\],.text-\[10\.40px\]{font-size:10.4px}.leading-4{--tw-leading:calc(var(--spacing) * 4);line-height:calc(var(--spacing) * 4)}.leading-5{--tw-leading:calc(var(--spacing) * 5);line-height:calc(var(--spacing) * 5)}.leading-6{--tw-leading:calc(var(--spacing) * 6);line-height:calc(var(--spacing) * 6)}.leading-7{--tw-leading:calc(var(--spacing) * 7);line-height:calc(var(--spacing) * 7)}.leading-8{--tw-leading:calc(var(--spacing) * 8);line-height:calc(var(--spacing) * 8)}.leading-9{--tw-leading:calc(var(--spacing) * 9);line-height:calc(var(--spacing) * 9)}.font-black{--tw-font-weight:var(--font-weight-black);font-weight:var(--font-weight-black)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.text-blue-600{color:var(--color-blue-600)}.underline{text-decoration-line:underline}.opacity-0{opacity:0}.shadow-\[0px_10px_30px_0px_rgba\(0\,0\,0\,0\.30\)\]{--tw-shadow:0px 10px 30px 0px var(--tw-shadow-color,#0000004d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_10px_30px_0px_rgba\(24\,119\,242\,0\.30\)\]{--tw-shadow:0px 10px 30px 0px var(--tw-shadow-color,#1877f24d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_10px_30px_0px_rgba\(37\,211\,102\,0\.30\)\]{--tw-shadow:0px 10px 30px 0px var(--tw-shadow-color,#25d3664d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_10px_30px_0px_rgba\(197\,18\,18\,0\.30\)\]{--tw-shadow:0px 10px 30px 0px var(--tw-shadow-color,#c512124d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_15px_40px_0px_rgba\(0\,0\,0\,0\.30\)\]{--tw-shadow:0px 15px 40px 0px var(--tw-shadow-color,#0000004d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0px_20px_60px_0px_rgba\(0\,0\,0\,0\.30\)\]{--tw-shadow:0px 20px 60px 0px var(--tw-shadow-color,#0000004d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.outline,.outline-1{outline-style:var(--tw-outline-style);outline-width:1px}.outline-offset-\[-1px\]{outline-offset:-1px}.outline-red-600{outline-color:var(--color-red-600)}.outline-red-700{outline-color:var(--color-red-700)}.outline-red-700\/30{outline-color:#bf000f4d}@supports (color:color-mix(in lab, red, red)){.outline-red-700\/30{outline-color:color-mix(in oklab, var(--color-red-700) 30%, transparent)}}.outline-white{outline-color:var(--color-white)}.outline-white\/20{outline-color:#fff3}@supports (color:color-mix(in lab, red, red)){.outline-white\/20{outline-color:color-mix(in oklab, var(--color-white) 20%, transparent)}}.blur{--tw-blur:blur(8px);filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.backdrop-blur-\[6px\]{--tw-backdrop-blur:blur(6px);-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.backdrop-blur-xs{--tw-backdrop-blur:blur(var(--blur-xs));-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}@media (width>=48rem){.md\:h-\[800px\]{height:800px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:text-7xl{font-size:var(--text-7xl);line-height:var(--tw-leading,var(--text-7xl--line-height))}}@media (width>=64rem){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}}
+        
 
-    </style>
-    <style>
-        .navbar {
-            --background: white;
+        body {
+            margin: 0
         }
-        #about, #services, #projects, #contact, .footer {
-            --background: white;
+
+        @property --tw-rotate-x {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-rotate-y {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-rotate-z {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-skew-x {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-skew-y {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-space-y-reverse {
+            syntax: "*";
+            inherits: false;
+            initial-value: 0
+        }
+
+        @property --tw-border-style {
+            syntax: "*";
+            inherits: false;
+            initial-value: solid
+        }
+
+        @property --tw-gradient-position {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-gradient-from {
+            syntax: "<color>";
+            inherits: false;
+            initial-value: #0000
+        }
+
+        @property --tw-gradient-via {
+            syntax: "<color>";
+            inherits: false;
+            initial-value: #0000
+        }
+
+        @property --tw-gradient-to {
+            syntax: "<color>";
+            inherits: false;
+            initial-value: #0000
+        }
+
+        @property --tw-gradient-stops {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-gradient-via-stops {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-gradient-from-position {
+            syntax: "<length-percentage>";
+            inherits: false;
+            initial-value: 0%
+        }
+
+        @property --tw-gradient-via-position {
+            syntax: "<length-percentage>";
+            inherits: false;
+            initial-value: 50%
+        }
+
+        @property --tw-gradient-to-position {
+            syntax: "<length-percentage>";
+            inherits: false;
+            initial-value: 100%
+        }
+
+        @property --tw-leading {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-font-weight {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-shadow {
+            syntax: "*";
+            inherits: false;
+            initial-value: 0 0 #0000
+        }
+
+        @property --tw-shadow-color {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-shadow-alpha {
+            syntax: "<percentage>";
+            inherits: false;
+            initial-value: 100%
+        }
+
+        @property --tw-inset-shadow {
+            syntax: "*";
+            inherits: false;
+            initial-value: 0 0 #0000
+        }
+
+        @property --tw-inset-shadow-color {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-inset-shadow-alpha {
+            syntax: "<percentage>";
+            inherits: false;
+            initial-value: 100%
+        }
+
+        @property --tw-ring-color {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-ring-shadow {
+            syntax: "*";
+            inherits: false;
+            initial-value: 0 0 #0000
+        }
+
+        @property --tw-inset-ring-color {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-inset-ring-shadow {
+            syntax: "*";
+            inherits: false;
+            initial-value: 0 0 #0000
+        }
+
+        @property --tw-ring-inset {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-ring-offset-width {
+            syntax: "<length>";
+            inherits: false;
+            initial-value: 0
+        }
+
+        @property --tw-ring-offset-color {
+            syntax: "*";
+            inherits: false;
+            initial-value: #fff
+        }
+
+        @property --tw-ring-offset-shadow {
+            syntax: "*";
+            inherits: false;
+            initial-value: 0 0 #0000
+        }
+
+        @property --tw-outline-style {
+            syntax: "*";
+            inherits: false;
+            initial-value: solid
+        }
+
+        @property --tw-blur {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-brightness {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-contrast {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-grayscale {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-hue-rotate {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-invert {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-opacity {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-saturate {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-sepia {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-drop-shadow {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-drop-shadow-color {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-drop-shadow-alpha {
+            syntax: "<percentage>";
+            inherits: false;
+            initial-value: 100%
+        }
+
+        @property --tw-drop-shadow-size {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-blur {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-brightness {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-contrast {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-grayscale {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-hue-rotate {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-invert {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-opacity {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-saturate {
+            syntax: "*";
+            inherits: false
+        }
+
+        @property --tw-backdrop-sepia {
+            syntax: "*";
+            inherits: false
+        }
+
+        :root {
+            --primary: #d41111;
+            --primary-dark: #a50d0d;
+            --primary-light: #ee2b2b;
+            --black: #141414;
+            --dark-bg: #1f1f1f;
+            --darker-bg: #0d0d0d;
+            --foreground: #f2f2f2;
+            --border: #333;
+            --gray: #737373
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: .5rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: all .2s
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px #c5121266
+        }
+
+        .navbar {
+            z-index: 1000;
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--primary);
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0
+        }
+
+        .navbar-container {
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            height: 80px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex
+        }
+
+        .nav-menu {
+            gap: 2rem;
+            list-style: none;
+            display: none
+        }
+
+        .nav-menu.show {
+            text-align: center;
+            background: white;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            padding: 35px;
+            display: flex;
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 0;
+            box-shadow: 1px 5px 5px #0001;
+        }
+
+        .nav-menu a {
+            color: #434854;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary)
+        }
+
+        .nav-right {
+            align-items: center;
+            gap: 1rem;
+            display: flex
+        }
+
+        /* The main container */
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 40px;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 60px;
+            width: auto;
+            mix-blend-mode: multiply;
+            display: block;
+            align-items: center;
+        }
+
+        .logo-subtitle {
+            color: rgba(14, 13, 13, 0.6);
+            font-size: .65rem
+        }
+
+        .social-links {
+            gap: 1rem;
+            display: flex
+        }
+
+        .social-links a {
+            --x-color: var(--foreground);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary)
+        }
+
+        .facebook-link {
+            color: #1877F2 !important;
+        }
+
+        .whatsapp-link {
+            color: #25D366 !important;
+        }
+
+        .menu-toggle {
+            color: #2d3436;
+            cursor: pointer;
+            background: 0 0;
+            border: none;
+            font-size: 1.5rem;
+            display: block
+        }
+
+        .lang-toggle {
+            color: #fff;
+            cursor: pointer;
+            background: #ffffff1a;
+            border: 1px solid #fff3;
+            border-radius: 50px;
+            align-items: center;
+            gap: .5rem;
+            padding: .4rem 1rem;
+            font-size: .9rem;
+            transition: all .3s;
+            display: flex
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary);
+            border-color: var(--primary)
+        }
+
+        .lang-toggle i {
+            font-size: 1rem
+        }
+
+        @media (width>=1024px) {
+            .nav-menu {
+                display: flex !important
+            }
+
+            .nav-menu.show {
+                flex-direction: unset;
+                background: unset;
+                position: unset;
+                height: unset;
+                width: unset;
+                display: flex !important
+            }
+
+            .menu-toggle {
+                display: none
+            }
+        }
+
+        .hero-slider {
+            height: 100vh;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .slide {
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+            position: absolute;
+            inset: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.5s ease
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto
+        }
+
+        .slide-image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%
+        }
+
+        .slide-overlay {
+            background: linear-gradient(90deg, #0d0d0de6 0%, #c512124d 50%, #0d0d0de6 100%);
+            position: absolute;
+            inset: 0
+        }
+
+        [dir=rtl] .slide-overlay {
+            background: linear-gradient(270deg, #0d0d0de6 0%, #c512124d 50%, #0d0d0de6 100%)
+        }
+
+        .slide-content {
+
+            position: absolute;
+            inset: 0;
+            width: 100% !important;
+            height: 100%;
+            padding: 0 5%;
+            font-size: 0.95rem;
+            max-width: 900px;
+            line-height: 1.4;
+            margin: 0 auto 1.5rem auto;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            unicode-bidi: isolate;
+        }
+
+        .slide-inner {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.5rem
+        }
+
+        .slide-text {
+            max-width: 42rem
+        }
+
+        .slide-title {
+            color: #fff;
+            margin-bottom: 1;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            width: 100%;
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+            font-size: clamp(1.8rem, 4.5vw, 4rem);
+        }
+
+        .slide-title .highlight {
+            color: var(--primary)
+        }
+
+        .slide-description {
+            color: #ffffffe6;
+            margin: 0px 25px;
+            margin-bottom: 2rem;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            line-height: 1.8
+        }
+
+        .slider-arrow {
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--primary);
+            color: #fff;
+            cursor: pointer;
+            z-index: 10;
+            background: #c512124d;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            font-size: 1.5rem;
+            transition: all .2s;
+            display: flex;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+
+        .slider-arrow:hover {
+            background: var(--primary)
+        }
+
+        .slider-arrow.prev {
+            left: 1.5rem
+        }
+
+        .slider-arrow.next {
+            right: 1.5rem
+        }
+
+        [dir=rtl] .slider-arrow.prev {
+            left: auto;
+            right: 1.5rem
+        }
+
+        [dir=rtl] .slider-arrow.next {
+            left: 1.5rem;
+            right: auto
+        }
+
+        .slider-dots {
+            z-index: 10;
+            gap: .75rem;
+            display: flex;
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translate(-50%)
+        }
+
+        .dot {
+            cursor: pointer;
+            background: #fff6;
+            border: none;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            transition: all .3s
+        }
+
+        .dot.active {
+            background: var(--primary);
+            border-radius: 6px;
+            width: 48px
+        }
+
+        .about-section {
+            background: white;
+            padding: 5rem 0
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem
+        }
+
+        .section-title {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 900
+        }
+
+        .section-divider {
+            background: white;
+            border-radius: 2px;
+            width: 6rem;
+            height: 4px;
+            margin: 0 auto 1.5rem
+        }
+
+        .section-subtitle {
+            color: grey;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8
+        }
+
+        .about-grid {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            display: grid
+        }
+
+        .about-subtitle {
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+            font-weight: 700
+        }
+
+        .about-description {
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8
+        }
+
+        .stats-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            display: grid
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            text-align: center;
+            border: 1px solid #c512124d;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px #c512124d
+        }
+
+        .stat-number {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 900
+        }
+
+        .stat-label {
+            margin-top: .5rem;
+            font-size: .9rem
+        }
+
+        @media (width<=768px) {
+
+            .about-grid,
+            .stats-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .services-section {
+            background: var(--black);
+            padding: 5rem 0
+        }
+
+        .services-section .container .section-header .section-title {
+            color: #fff;
+        }
+
+        .services-section .container .section-header .section-subtitle {
+            color: #ffffffb3;
+        }
+
+        .services-grid {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            display: grid
+        }
+
+        .service-card {
+            background: var(--dark-bg);
+            border: 1px solid #c512124d;
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all .3s;
+            box-shadow: 0 15px 40px #0000004d
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px #c5121266
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+            display: flex
+        }
+
+        .service-icon i {
+            color: #fff;
+            font-size: 2rem
+        }
+
+        .service-icon:hover,
+        .service-icon:active {
+            background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+            transform: scale(1.1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon:hover i,
+        .service-icon:active i {
+            color: #fef08a;
+            transform: rotate(200deg);
+        }
+
+        .service-title {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700
+        }
+
+        .service-description {
+            color: #ffffffb3;
+            margin-bottom: 1.5rem;
+            line-height: 1.6
+        }
+
+        @media (width<=768px) {
+            .services-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .projects-section {
+            background: white;
+            padding: 5rem 0
+        }
+
+        .projects-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            display: grid
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid grey;
+            border-radius: 20px;
+            transition: all .3s;
+            overflow: hidden;
+            box-shadow: 0 10px 30px #7e74744d
+        }
+
+        .project-card:hover {
+            border-color: grey;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px #8d3e3e66
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden
+        }
+
+        .project-image img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform .3s
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05)
+        }
+
+        .project-content {
+            padding: 1.5rem
+        }
+
+        .project-title {
+            color: #434854;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700
+        }
+
+        .project-description {
+            color: lightslategray;
+            margin-bottom: 1.5rem;
+            line-height: 1.6
+        }
+
+        .project-tags {
+            flex-wrap: wrap;
+            gap: .5rem;
+            display: flex
+        }
+
+        .project-tag {
+            color: #434854;
+            background: #916e6e33;
+            border: 1px solid #a095954d;
+            border-radius: 20px;
+            padding: .3rem .8rem;
+            font-size: .8rem;
+            font-weight: 600
+        }
+
+        /* productdata & section */
+        .products-section {
+            padding: 80px 10%;
+            background-color: #ffffff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: #008080;
+            /* Teal Accent */
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: #636e72;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+
+        .partner-grid-label {
+            font-size: 1.1rem;
+            color: #b2bec3;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+
+        .brand-partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+
+        .brand-card-inner {
+            background: #ffffff;
+            border-radius: 16px;
+
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .brand-card-link:hover .brand-card-inner {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: #ff8a71;
+
+        }
+
+
+        .brand-logo-img {
+            max-width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+            filter: grayscale(20%);
+            /* Optional: cleaner look */
+        }
+
+        .brand-name-fallback {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #444;
+            text-align: center;
+        }
+
+        .contact-section {
+            background: white;
+            padding: 5rem 0
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            display: grid
+        }
+
+        .contact-info h3 {
+            color: #434854;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 700
+        }
+
+        .contact-info p {
+            color: #434854;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8
+        }
+
+        .contact-items {
+            flex-direction: column;
+            gap: 1.5rem;
+            display: flex
+        }
+
+        .contact-item {
+            align-items: flex-start;
+            gap: 1rem;
+            display: flex
+        }
+
+        .contact-icon {
+            background: whitesmoke;
+            border-radius: 50%;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            display: flex
+        }
+
+        .contact-icon i {
+            color: #434854;
+            font-size: 1.2rem
+        }
+
+        .contact-details h4 {
+            color: #434854;
+            margin-bottom: .5rem;
+            font-weight: 600
+        }
+
+        .contact-details p {
+            color: grey;
+            margin: 0;
+            font-size: 1rem
+        }
+
+        .contact-details p a:hover {
+            color: var(--primary) !important
+        }
+
+        .contact-details:has(.contactPhone) p a {
+            color: #434854;
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .contact-details:has(.contactEmail) p a {
+            color: #434854;
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .contact-form {
+            background: white;
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px grey
+        }
+
+        .contact-form .wrapper {
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2.5rem;
+            display: flex
+        }
+
+        .contact-form .wrapper a {
+            text-decoration: none
+        }
+
+        .contact-form .wrapper a button {
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 15px;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 1.25rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: all .3s;
+            display: flex
+        }
+
+        .contact-form .wrapper a button i {
+            font-size: 1.8rem
+        }
+
+        .contact-form .wrapper a.contact-facebook button {
+            background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
+            transform: translateY(0);
+            box-shadow: 0 10px 30px #1877f24d
+        }
+
+        .contact-form .wrapper a.contact-facebook button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px #1877f280
+        }
+
+        .contact-form .wrapper a.contact-whatsapp button {
+            background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+            transform: translateY(0);
+            box-shadow: 0 10px 30px #25d3664d
+        }
+
+        .contact-form .wrapper a.contact-whatsapp button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px #25d36680
+        }
+
+        .contact-form .wrapper a.contact-phone button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            box-shadow: 0 10px 30px #c512124d
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem
+        }
+
+        .form-group label {
+            color: #272121;
+            margin-bottom: .5rem;
+            font-weight: 600;
+            display: block
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            color: grey;
+            background: white;
+            border: 1px solid #fff3;
+            border-radius: 8px;
+            width: 100%;
+            padding: .75rem 1rem;
+            font-size: 1rem;
+            transition: border-color .2s
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            outline: none
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: grey;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: all .3s
+        }
+
+        .btn-submit:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px #c5121280
+        }
+
+        @media (width<=768px) {
+            .contact-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .footer {
+            background: lightgrey;
+            color: darkslategrey;
+            border-top: 1px solid var(--primary);
+            padding: 3rem 0 1.5rem
+        }
+
+        .footer-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            display: grid
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.30rem
+        }
+
+        .footer-section p {
+            color: darkslategray;
+            font-size: .875rem;
+            line-height: 1.6
+        }
+
+        .footer-section.company h3 span {
+            color: rgb(153, 28, 28)
+        }
+
+        .footer-section.contact p a {
+            color: darkslategray;
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .footer-links {
+            list-style: none
+        }
+
+        .footer-links li {
+            margin-bottom: .5rem
+        }
+
+        .footer-links a {
+            color: darkslategray;
+            font-size: .875rem;
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .footer-links a:hover {
+            color: whitesmoke
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #201b1b1a;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 2rem;
+            display: flex
+        }
+
+        .footer-bottom p {
+            color: darkslategray;
+            font-size: .875rem
+        }
+
+        .footer-bottom div.pp-tnc {
+            gap: 1.5rem;
+            display: flex
+        }
+
+        .footer-bottom div.pp-tnc a {
+            color: darkslategray;
+            font-size: .875rem;
+            text-decoration: none
+        }
+
+        .footer-social {
+            gap: 1rem;
+            margin-top: 1.5rem;
+            display: flex
+        }
+
+
+
+        .footer-social a.social-icon {
+            color: darkslategray;
+            font-size: 1.5rem;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+
+        .footer-social a.fb-hover:hover {
+            color: #1877F2 !important;
+            transform: translateY(-3px);
+            filter: drop-shadow(0 4px 6px rgba(24, 119, 242, 0.3));
+        }
+
+
+
+        .footer-social a.wa-hover:hover {
+            color: #25D366 !important;
+            transform: translateY(-3px);
+            filter: drop-shadow(0 4px 6px rgba(37, 211, 102, 0.4));
         }
     </style>
 </head>
@@ -44,22 +1359,33 @@
             logo: {
                 //image: "https://i.postimg.cc/FztCXZhr/Whats-App-Image-2025-10-04-at-1-59-02-AM.jpg",
                 image: "https://uat-ph-com.github.io/itcore/IMG_8210.jpeg",
-                alt: "IT Core Logo",
-                name: "IT SHORE",
-                nameKey: "logoName",
-                subtitle: "Professional IT Solutions",
-                subtitleKey: "logoSubtitle"
+                //alt: "IT Core Logo",
+                //name: "IT CORE",
+                //nameKey: "logoName",
+                //subtitle: "Professional IT Solutions",
+                //subtitleKey: "logoSubtitle"
             },
             navItems: [
                 { href: "#home", text: "Home", key: "navHome" },
                 { href: "#about", text: "About Us", key: "navAbout" },
                 { href: "#services", text: "Services", key: "navServices" },
                 { href: "#projects", text: "Projects", key: "navProjects" },
+                { href: "#products", text: "Products", key: "navProducts" },
                 { href: "#contact", text: "Contact", key: "navContact" }
             ],
             socialLinks: [
-                { href: "https://www.facebook.com/people/IT-Core/61577376717146/", icon: "fab fa-facebook", label: "Facebook" },
-                { href: "https://wa.me/201095363315", icon: "fab fa-whatsapp", label: "WhatsApp" }
+                {
+                    href: "https://www.facebook.com/itcoresolutionsinc",
+                    icon: "fab fa-facebook",
+                    label: "Facebook",
+                    className: "facebook-link" // Add this
+                },
+                {
+                    href: "https://wa.me/201095363315",
+                    icon: "fab fa-whatsapp",
+                    label: "WhatsApp",
+                    className: "whatsapp-link" // Add this
+                }
             ]
         };
         const Navbar = () => {
@@ -90,7 +1416,7 @@
                         <div className="nav-right">
                             <div className="social-links">
                                 {navData.socialLinks.map((link, index) => (
-                                    <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
+                                    <a href={link.href} class={`social-icon ${link.className}`}>
                                         <i className={link.icon}></i>
                                     </a>
                                 ))}
@@ -111,45 +1437,45 @@
         const heroSlides = [
             {
                 id: 1,
-                image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=1080&fit=crop",
+                image: "https://img.freepik.com/premium-photo/digital-workspace-it-operations-incident-room-work-atmosphere-technology-space_569725-14617.jpg",
                 alt: "IT Solutions",
                 title: [
                     { text: "Welcome to ", highlight: false, translationKey: "hero1Title1" },
-                    { text: "IT Core", highlight: true, translationKey: "hero1Title2" }
+                    { text: "ITCore", highlight: true, translationKey: "hero1Title2" }
                 ],
-                description: "We provide professional IT solutions to help businesses and medical centers secure and operate their systems with high efficiency.",
+                description: "We provide a foundation of proactive technology, allowing your business to drive innovation and increase productivity, without interruption.",
                 descriptionKey: "hero1Desc",
                 buttonText: "Contact Us Now",
                 buttonKey: "hero1Btn",
-                buttonLink: "#contact"
+                buttonLink: "#contact",
             },
             {
                 id: 2,
-                image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1920&h=1080&fit=crop",
+                image: "https://tse4.mm.bing.net/th/id/OIP.bFfKbe2dC63L5gGcmYwCBwAAAA?w=474&h=203&rs=1&pid=ImgDetMain&o=7&rm=3",
                 alt: "Technical Support",
                 title: [
                     { text: "Fast Technical ", highlight: false, translationKey: "hero2Title1" },
                     { text: "Support", highlight: true, translationKey: "hero2Title2" }
                 ],
-                description: "Professional team available 24/7 to provide technical support and assistance for all your IT needs",
+                description: "Experience seamless operations with our dedicated 24/7 support team and proactive infrastructure monitoring.",
                 descriptionKey: "hero2Desc",
                 buttonText: "Our Services",
                 buttonKey: "hero2Btn",
-                buttonLink: "#services"
+                buttonLink: "#services",
             },
             {
                 id: 3,
-                image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1920&h=1080&fit=crop",
+                image: "https://www.socinvestigation.com/wp-content/uploads/2023/05/AdobeStock_564648565-1920x1280.jpeg",
                 alt: "Security Solutions",
                 title: [
                     { text: "Comprehensive ", highlight: false, translationKey: "hero3Title1" },
                     { text: "Security", highlight: true, translationKey: "hero3Title2" }
                 ],
-                description: "Advanced security solutions to protect your data and systems from cyber threats",
+                description: "Neutralizing cyber threats before they reach your systems with multi-layered security protocols and continuous monitoring.",
                 descriptionKey: "hero3Desc",
                 buttonText: "Our Projects",
                 buttonKey: "hero3Btn",
-                buttonLink: "#projects"
+                buttonLink: " #projects",
             }
         ];
         const Hero = () => {
@@ -191,9 +1517,14 @@
                                         <p className="slide-description" data-translate={slide.descriptionKey}>
                                             {slide.description}
                                         </p>
-                                        <button className="btn-primary" data-translate={slide.buttonKey} onClick={() => window.location.href = slide.buttonLink}>
+
+                                        <a
+                                            href={slide.buttonLink}
+                                            className="btn-primary"
+                                            onClick={(e) => console.log("Target Link:", slide.buttonLink)}
+                                        >
                                             {slide.buttonText}
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -294,16 +1625,16 @@
             header: {
                 title: "Our Services",
                 titleKey: "servicesTitle",
-                subtitle: "We offer comprehensive IT solutions to meet all your technology needs",
+                subtitle: "We provide comprehensive IT solutions designed to address a wide range of technology needs and support the efficiency, security, and growth of your business.",
                 subtitleKey: "servicesSubtitle"
             },
             services: [
                 {
                     id: 1,
-                    icon: "fas fa-headset",
-                    title: "IT Support & System Administration",
+                    icon: "fa-solid fa-satellite",
+                    title: "Satellite Internet",
                     titleKey: "service1Title",
-                    description: "Comprehensive IT support and system management to ensure business continuity.",
+                    description: "Provision of reliable high-speed internet access in remote or underserved areas via satellite connectivity.",
                     descriptionKey: "service1Desc"
                 },
                 {
@@ -459,64 +1790,64 @@
             header: {
                 title: "Our Projects",
                 titleKey: "projectsTitle",
-                subtitle: "Explore some of our successful IT implementations and solutions",
+                subtitle: "Discover how our tailored IT solutions solve real-world problems and drive sustainable growth.",
                 subtitleKey: "projectsSubtitle"
             },
             projects: [
                 {
                     id: 1,
-                    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop",
-                    alt: "Hospital IT Infrastructure",
-                    title: "Hospital IT Infrastructure",
-                    titleKey: "project1Title",
-                    description: "Complete IT infrastructure setup for a 200-bed hospital including network design, security systems, and medical equipment integration.",
-                    descriptionKey: "project1Desc",
+                    image: "https://tse4.mm.bing.net/th/id/OIP.mFYZ46wq3lXfFnvKuGgShwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3 ",
+                    alt: "Integrated POS & Retail Infrastructure",
+                    title: "High-traffic Retail POS Deployment. ",
+                    titleKey: "project2Title",
+                    description: "Implementation of a unified retail ecosystem connecting POS hardware, servers, and routers. This project ensures seamless communication between physical storefronts and centralized management software for real-time sales tracking.",
+                    descriptionKey: "project2Desc",
                     tags: [
-                        { text: "Network Setup", key: "project1Tag1" },
-                        { text: "Security", key: "project1Tag2" },
-                        { text: "Medical Systems", key: "project1Tag3" }
+                        { text: "Network & Infra Design", key: "project2Tag1" },
+                        { text: "Point of Sale", key: "project2Tag2" },
+                        { text: "Software & Hardware Integration.", key: "project2Tag3" }
                     ]
                 },
                 {
                     id: 2,
-                    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
-                    alt: "Corporate Office Network",
-                    title: "Corporate Office Network",
-                    titleKey: "project2Title",
-                    description: "Enterprise-grade network infrastructure for a multinational company with 500+ employees, including cloud integration and security protocols.",
+                    image: "https://scontent.fceb9-1.fna.fbcdn.net/v/t1.6435-9/87612574_611467772735234_4195792764513812480_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFz313Mxw_utXlW6vLTtl0BeaMqEzkdneF5oyoTOR2d4fDvwVI7p0YXHtMvKjKRKja40sehEKqaO3Qrb0UjdBsz&_nc_ohc=7G4Bb2Tq0XwQ7kNvwE9s25i&_nc_oc=AdoXBem94fB2OiJDwO0xx_IDRe7fkFBYPQFPxoLewOvlJhUXY-poGqtpGc2oQuZDeQc&_nc_zt=23&_nc_ht=scontent.fceb9-1.fna&_nc_gid=buP9RtDPN-vnCdo82CjcNA&_nc_ss=7a32e&oh=00_Afyh58Br-l_fQDwbzD-YMzJGPeq9sdGzQCfOFkPO1Uj2qQ&oe=69E9BDA9",
+                    alt: "Cloud Software Data Migration",
+                    title: "Digital transformation for corporate company",
+                    titleKey: "Cloud Software Data Migration",
+                    description: "Migrating legacy local databases to secure cloud environments for high-availability web platform.",
                     descriptionKey: "project2Desc",
                     tags: [
-                        { text: "Enterprise Network", key: "project2Tag1" },
-                        { text: "Cloud Integration", key: "project2Tag2" },
-                        { text: "Enterprise Security", key: "project2Tag3" }
+                        { text: " Cloud Dev", key: "project2Tag1" },
+                        { text: "Data Migration", key: "project2Tag2" },
+                        { text: "Operating System", key: "project2Tag3" }
                     ]
                 },
                 {
                     id: 3,
-                    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop",
-                    alt: "Educational Institution",
-                    title: "Educational Institution Setup",
+                    image: "https://www.securityweek.com/wp-content/uploads/2025/11/funding-investment-market-4-1024x576.jpeg",
+                    alt: "Advanced Security Endpoint Protection",
+                    title: "Security overhaul for industrial offices",
                     titleKey: "project3Title",
-                    description: "Comprehensive IT solution for a university including campus-wide network, e-learning platform, and student management systems.",
+                    description: "Deploying multi-layered frameworks with  CCTV and hardware firewalls to protect assets.",
                     descriptionKey: "project3Desc",
                     tags: [
-                        { text: "Campus Network", key: "project3Tag1" },
-                        { text: "E-Learning", key: "project3Tag2" },
-                        { text: "Management Systems", key: "project3Tag3" }
+                        { text: "Network Security", key: "project3Tag1" },
+                        { text: "Endpoint Protection", key: "project3Tag2" },
+                        { text: "CCTV", key: "project3Tag3" }
                     ]
                 },
                 {
                     id: 4,
-                    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop",
-                    alt: "Manufacturing Plant Security",
-                    title: "Manufacturing Plant Security",
+                    image: "https://tse4.mm.bing.net/th/id/OIF.Hsyt7SReg7UuXEBakjfeQw?rs=1&pid=ImgDetMain&o=7&rm=3",
+                    alt: "Custom API ERP Development",
+                    title: "Tailored management for complex operations",
                     titleKey: "project4Title",
-                    description: "Advanced security and monitoring systems for a large manufacturing facility including CCTV, access control, and network security.",
+                    description: "Developing bespoke ERP systems that synchronize inventory, finance, and sales data into one platform.",
                     descriptionKey: "project4Desc",
                     tags: [
-                        { text: "CCTV Systems", key: "project4Tag1" },
-                        { text: "Access Control", key: "project4Tag2" },
-                        { text: "Industrial Security", key: "project4Tag3" }
+                        { text: "ERP ", key: "project4Tag1" },
+                        { text: "Custom API", key: "project4Tag2" },
+                        { text: " Web App", key: "project4Tag3" }
                     ]
                 }
             ]
@@ -563,13 +1894,204 @@
                 </section>
             );
         };
-        //
+        //* products*//
+        const productsData = {
+            header: {
+                title: "Our Products",
+                subtitle: "Innovative software solutions and world-class hardware partnerships designed to streamline your business operations.",
+                titleKey: "productsTitle",
+                subtitleKey: "productsSubtitle"
+            },
+            sections: [
+                {
+                    id: 1,
+                    type: "partners",
+                    brands: [
+                        { name: "Acer", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.-XzNDVyLX6wLgTWwJtIi-gHaED?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.acer.com" },
+                        { name: "Acerpure", logoUrl: "https://cdn.manilastandard.net/wp-content/uploads/2023/10/Acerpure.webp", url: "https://www.acerpure.com" },
+                        { name: "Adobe", logoUrl: "https://cdn.freelogovectors.net/wp-content/uploads/2023/05/adobe-logo-02-freelogovectors.net_.png", url: "https://www.adobe.com" },
+                        { name: "Advance.AI", logoUrl: "https://website-static.advancegroup.com.cn/img/advance_ai_logo2.abbfefe.png", url: "https://web.advance.ai" },
+                        { name: "Allied Telesis", logoUrl: "https://cdn.freebiesupply.com/logos/thumbs/2x/allied-telesis-logo.png", url: "https://www.alliedtelesis.com" },
+                        { name: "APC", logoUrl: "https://www.accu-tech.com/hs-fs/hubfs/APC%20SE%20Logo-1.jpeg?width=5692&height=3200&name=APC%20SE%20Logo-1.jpeg", url: "https://www.apc.com" },
+                        { name: "Apple", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg", url: "https://www.apple.com" },
+                        { name: "Arista", logoUrl: "https://www.arista.com/assets/images/logo/Arista_Logo.png", url: "https://www.arista.com" },
+                        { name: "Asus", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg", url: "https://www.asus.com" },
+                        { name: "Audiocodes", logoUrl: "https://logodix.com/logo/1710625.jpg", url: "https://www.audiocodes.com" },
+                        { name: "Aukey", logoUrl: "https://manuals.plus/wp-content/uploads/2022/03/AUKEY-logo.jpg", url: "https://www.aukey.com" },
+                        { name: "Autodesk", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.U7cNxhSj_QMDmE5S8Gv9pwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.autodesk.com" },
+                        { name: "Automation Anywhere", logoUrl: "https://logodix.com/logo/957450.png", url: "https://www.automationanywhere.com" },
+                        { name: "Avaya", logoUrl: "https://th.bing.com/th/id/R.70e12d90b3c0ae4fd1fabc8feb3b97fa?rik=WG2L1S6Bmwibsg&riu=http%3a%2f%2fwww.trcnetworks.com%2fsites%2fdefault%2ffiles%2fimages%2favaya_logo.jpg&ehk=dimpmWX%2bISuXXGdtKzphpwQGkoirPaSsXpmd3%2bubFiQ%3d&risl=&pid=ImgRaw&r=0", url: "https://www.avaya.com" },
+                        { name: "AWS", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg", url: "https://aws.amazon.com" },
+                        { name: "Canon", logoUrl: "https://fastpng.com/images/file/canon-logo-png-1109-x-241-nps8y7jnmqxy9n0j.png", url: "https://global.canon" },
+                        { name: "Choetech", logoUrl: "https://i.pinimg.com/originals/c4/fd/a1/c4fda1b2ba33f54c3f0723e575c33ac9.jpg", url: "https://choetech.com" },
+                        { name: "Cisco", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg", url: "https://www.cisco.com" },
+                        { name: "Cisco Meraki", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.Hup6OHzkOfV52wo4-Bi0GAHaBc?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://meraki.cisco.com" },
+                        { name: "Cloudera", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.0uOzX7kVq95duJ123DTIhgHaA5?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.cloudera.com" },
+                        { name: "Cohesity", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.FrqRnZt6cvpQ9mw-618-1QHaBF?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.cohesity.com" },
+                        { name: "Commvault", logoUrl: "https://appexchange.salesforce.com/image_host/c32e6dad-1b3d-4eda-9e99-cfda05d93d8b.png", url: "https://www.commvault.com" },
+                        { name: "CyberPower", logoUrl: "https://manuals.plus/wp-content/uploads/2023/09/CyberPower-Logo-4.png", url: "https://www.cyberpowersystems.com" },
+                        { name: "Dahua", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.QSCn2bB-yORC4WLIV8vUYwHaCN?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.dahuasecurity.com" },
+                        { name: "Delinea", logoUrl: "https://th.bing.com/th/id/OIP.XjLnrTlifY_UNNGo32_rcgHaBr?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://delinea.com" },
+                        { name: "Dell", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg", url: "https://www.dell.com" },
+                        { name: "Dell Technologies", logoUrl: "https://pixelbag.net/wp-content/uploads/2022/10/dell-technologies-vector-logo.jpg", url: "https://www.delltechnologies.com" },
+                        { name: "D-Link", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.KG851LipyQHtusGxo8HPjAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.dlink.com" },
+                        { name: "Docusign", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.6Jw3lb7WgaaycCR1rvL2XwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.docusign.com" },
+                        { name: "Eaton", logoUrl: "https://th.bing.com/th/id/OIP.aEFTZXrwe_n3mlfBR_G0yQHaB_?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.eaton.com" },
+                        { name: "Elastic", logoUrl: "https://th.bing.com/th/id/OIP.lb1-INWjwFekdSoBnObEmAHaCi?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.elastic.co" },
+                        { name: "Extreme Networks", logoUrl: "https://www.forwardnetworks.com/wp-content/uploads/2023/08/extreme-networks-2.jpg", url: "https://www.extremenetworks.com" },
+                        { name: "FiberHome", logoUrl: "https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/3c2928b6dc68140ba9f3", url: "https://www.fiberhome.com" },
+                        { name: "Forcepoint", logoUrl: "https://www.c5technology.com.au/wp-content/uploads/2020/09/Forcepoint-logo-800x153.png", url: "https://www.forcepoint.com" },
+                        { name: "Formlabs", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.Zurdbj-dH5qx3pWh1MJklwHaBE?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://formlabs.com" },
+                        { name: "Fortinet", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.GX28AZldXM5N3aefkyQqZQHaA7?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.fortinet.com" },
+                        { name: "Fujifilm", logoUrl: "https://th.bing.com/th/id/OIP.17VGylOS3hzPUQXDoOiNEgHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.fujifilm.com" },
+                        { name: "Fusionsolar", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.mcDcmrwbiaWO-M7Q2pZsyAHaD3?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://solar.huawei.com" },
+                        { name: "Go Cloud", logoUrl: "https://media.licdn.com/dms/image/v2/C4D0BAQGVLVtMedt_1w/company-logo_200_200/company-logo_200_200/0/1630474596571/go_cloud_inc_logo?e=2147483647&v=beta&t=QHwAR5WBtFHazgfMQxy6R4hAVraZfeWEzkHeFccY-tA", url: "https://gocloud.ph" },
+                        { name: "Google Cloud", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.EX9YrIowZx7uzzFY6FsCMQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://cloud.google.com" },
+                        { name: "H3C", logoUrl: "https://media.licdn.com/dms/image/v2/C560BAQGjlYDF9o3YdA/company-logo_200_200/company-logo_200_200/0/1679549078857/h3c_technologies_co_ltd_logo?e=2147483647&v=beta&t=ffSEKoGKdPRsW5VwAsPAD3j8S3KI360Rksc4N8Rbh58", url: "https://www.h3c.com" },
+                        { name: "Hexnode", logoUrl: "https://www.rasinfotech-dubai.com/wp-content/uploads/2024/05/Hexnode-logo-with-white-background1-1536x517.png", url: "https://www.hexnode.com" },
+                        { name: "Hitachi Vantara", logoUrl: "https://s7d9.scene7.com/is/image/hitachivantara/data-center-transformation-sustainability-hv-case-study-logo?fmt=webp", url: "https://www.hitachivantara.com" },
+                        { name: "Hokowits", logoUrl: "https://resources.holowits.com/news/d2a2cbe1237a4f7a9b45fa6dc196d525.png", url: "https://www.hokowits.com" },
+                        { name: "Honeywell", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.pW_sMKgLQwJA--e378EfnwHaDt?w=666&h=333&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.honeywell.com" },
+                        { name: "HP", logoUrl: "https://i0.wp.com/upfonts.com/wp-content/uploads/2019/09/HP-Logo.png", url: "https://www.hp.com" },
+                        { name: "HP & Poly", logoUrl: "https://cdn.mos.cms.futurecdn.net/eTVjVAbgzyN5AyPxMqaaPA-320-80.png", url: "https://www.hp&poly.com" },
+                        { name: "Hewlette Packard Enterprise", logoUrl: "https://cdn.cs.1worldsync.com/b6/17/b6175fe4-e902-4f8f-bd73-594aa21e6c91.jpg", url: "https://www.hewlettepackardenterprise.com" },
+                        { name: "HPE Aruba", logoUrl: "https://dec.vn/wp-content/uploads/2023/09/HPEAruba.png", url: "https://www.arubanetworks.com" },
+                        { name: "HPE SimpliVity", logoUrl: "https://www.storagereview.com/wp-content/uploads/2019/10/1-HPE_logo_SimpliVity_1.jpg", url: "https://www.hpe.com/info/simplivity" },
+                        { name: "Huawei", logoUrl: "https://www.freepnglogos.com/uploads/huawei-logo-png/huawei-logo-png-hd-0.png", url: "https://www.huawei.com" },
+                        { name: "Huawei eKit", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.zfHCxrBOkKAkm1n08DgnogHaCa?w=3339&h=1091&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://ekit.huawei.com" },
+                        { name: "HyperX", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.bDMDSr_90yzPoj5quObIVwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://hyperx.com" },
+                        { name: "Hytera", logoUrl: "https://th.bing.com/th/id/OIP.DNfuqpuW9Vru8X4id2_15wHaDD?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.hytera.com" },
+                        { name: "IBM", logoUrl: "https://syndelltech.com/wp-content/uploads/2023/02/IBM-Watson-Studio-Logo.png", url: "https://www.ibm.com" },
+                        { name: "iBoss", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.xwmOOHTPz8X5m74jKafRyAHaCB?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.iboss.com" },
+                        { name: "Informatica", logoUrl: "https://companieslogo.com/img/orig/INFA_BIG-13006792.png?t=1636076858", url: "https://www.informatica.com" },
+                        { name: "Juniper Networks", logoUrl: "https://news-cdn.softpedia.com/images/news2/Juniper-Warns-of-Critical-Vulnerability-in-Its-Routers-2.jpg", url: "https://www.juniper.net" },
+                        { name: "Kaspersky", logoUrl: "https://content.kaspersky-labs.com/se/ru/content/ru-ru/images/homepage/kaspersky-logotype-green/kaspersky-logotype-green.png", url: "https://www.kaspersky.com" },
+                        { name: "Kodak Alaris", logoUrl: "https://th.bing.com/th/id/OIP.AqayfTUfs1gafb8AheqvBQHaBV?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.alarisworld.com" },
+                        { name: "Lenovo", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.bA1bZVbwO4t8hiXwqLLKkAHaBh?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.lenovo.com" },
+                        { name: "LG", logoUrl: "https://th.bing.com/th/id/R.a8a655ee926daaff53a7e98fff27f2e9?rik=%2bHZnveegkBfayg&riu=http%3a%2f%2fpngimg.com%2fuploads%2flg_logo%2flg_logo_PNG15.png&ehk=04d34z32I95izfs%2b6b%2bh8Iq6hnex%2bx7nUJ6i5Jw5%2flM%3d&risl=&pid=ImgRaw&r=0", url: "https://www.lg.com" },
+                        { name: "Menlo Security", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.tzMO1KSUSOnIR5M8zXfGAAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.menlosecurity.com" },
+                        { name: "Microsoft", logoUrl: "https://th.bing.com/th/id/OIP.qbsTDbB9qKP6pBQ0Rl9bpQHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.microsoft.com" },
+                        { name: "Microsoft Azure", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.VleZRz5eT_sdNrs7X8BADAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://azure.microsoft.com" },
+                        { name: "Microsoft Surface", logoUrl: "https://www.xma.co.uk/wp-content/uploads/2020/02/Microsoft-Surface-Logo.png", url: "https://www.microsoft.com/surface" },
+                        { name: "Neat", logoUrl: "https://namlongtelecom.vn/wp-content/uploads/2022/11/logo-neat.png", url: "https://neat.no" },
+                        { name: "NetApp", logoUrl: "https://companieslogo.com/img/orig/NTAP_BIG-15a3bf5f.png?t=1648747418", url: "https://www.netapp.com" },
+                        { name: "Newline", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.AcPd9xCK7eWC8RoynrS44gHaDt?w=1000&h=500&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://newline-interactive.com" },
+                        { name: "Nintendo Switch", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.ujP1CVLOujVJgfED4oswCgAAAA?w=262&h=280&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.nintendo.com/switch" },
+                        { name: "Nutanix", logoUrl: "https://companieslogo.com/img/orig/NTNX_BIG-5e61fe7f.png?t=1684168521&download=true", url: "https://www.nutanix.com" },
+                        { name: "Nvidia", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.ERB5mIkFOxAt2WnK7HP8yQHaFd?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.nvidia.com" },
+                        { name: "Omnissa", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.vChJhcgeGg8uTPhtAtUtPgHaCe?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.omnissa.com" },
+                        { name: "Opentext", logoUrl: "https://th.bing.com/th/id/OIP.X9BZSn0-MGGQ3Ojl5mrzRAHaBa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.opentext.com" },
+                        { name: "Oppo", logoUrl: "https://pluspng.com/img-png/oppo-logo-png-oppo-logo-and-symbol-meaning-history-png-1920x1080.png", url: "https://www.oppo.com" },
+                        { name: "Oracle", logoUrl: "https://www.pngmart.com/files/23/Oracle-Logo-PNG-Image.png", url: "https://www.oracle.com" },
+                        { name: "Panasonic", logoUrl: "https://pluspng.com/img-png/panasonic-logo-png-panasonic-logo-transparent-png-pluspng-2507x512.png", url: "https://holdings.panasonic" },
+                        { name: "Panduit", logoUrl: "https://www.liblogo.com/img-logo/pa8174pfaa-panduit-logo-panduit-logo.png", url: "https://www.panduit.com" },
+                        { name: "Perle", logoUrl: "https://cdn.cs.1worldsync.com/16/52/16525809-0e7d-429d-9fcf-e541edea1d3a.jpg", url: "https://www.perle.com" },
+                        { name: "QNAP", logoUrl: "https://www.liblogo.com/img-logo/qn3822l51c-qnap-logo-logo-qnap-marketing-resource.png", url: "https://www.qnap.com" },
+                        { name: "Realme", logoUrl: "https://static.vecteezy.com/system/resources/previews/022/101/087/original/realme-logo-transparent-free-png.png", url: "https://www.realme.com" },
+                        { name: "Red Hat", logoUrl: "https://www.liblogo.com/img-logo/re3075rdd5-red-hat-logo-red-hat--org.png", url: "https://www.redhat.com" },
+                        { name: "Re-Hx", logoUrl: "https://www.imda.gov.sg/-/media/imda/images/content/for-industry/technology-and-innovation/innovative-tech-companies/sgd-spark/ren3-logo.webp", url: "https://www.re-hx.com" },
+                        { name: "Riverbed", logoUrl: "https://www.riverbed.com/riverbed-wp-content/themes/riverbed/dist/images/header/riverbed-logo.png", url: "https://www.riverbed.com" },
+                        { name: "RSA", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.jNip43XgRChGBIDsn_NP0QHaCm?w=1066&h=374&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.rsa.com" },
+                        { name: "Rubrik", logoUrl: "https://th.bing.com/th/id/OIP.YwOP69hotF4RK3zH-n9KvAHaCH?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.rubrik.com" },
+                        { name: "Samsung", logoUrl: "https://th.bing.com/th/id/OIP.JR-XVFg4MGmR90sirZza9AHaCf?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.samsung.com" },
+                        { name: "SAS", logoUrl: "https://cdn.freebiesupply.com/logos/thumbs/2x/sas-6-logo.png", url: "https://www.sas.com" },
+                        { name: "Seagate", logoUrl: "https://th.bing.com/th/id/OIP.VuKxlvYOWJj7y9XmAs5O-QHaE7?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.seagate.com" },
+                        { name: "Segway-Ninebot", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.NInHfCoLDzIIerd9IqCF9gHaB2?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://b2b.segway.com" },
+                        { name: "SonicWall", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.Ab_6umaEOm42XjsKR-XG7AHaEH?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.sonicwall.com" },
+                        { name: "Stellar Cyber", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.esKyFLl8Ok-xBkG-g76R5QHaBa?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://stellarcyber.ai" },
+                        { name: "Sunmi", logoUrl: "https://th.bing.com/th/id/OIP.72M5VMahh7_hBoiEmLiTKwHaBa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.sunmi.com" },
+                        { name: "Sunra", logoUrl: "https://sunra.cl/cdn/shop/files/Logo_Sunra_Chile.png?v=1702583473", url: "https://www.sunraev.com" },
+                        { name: "Supermicro", logoUrl: "https://th.bing.com/th?id=OIF.5u78kQJAchVhB%2b6Jb6te1A&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.supermicro.com" },
+                        { name: "Suse", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.Kp6ZvXfookTFYrQmixC9MAHaGy?w=736&h=675&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.suse.com" },
+                        { name: "Synology", logoUrl: "https://www.synology.com/img/company/branding/synology_logo.jpg", url: "https://www.synology.com" },
+                        { name: "Toshiba", logoUrl: "https://th.bing.com/th/id/OIP.kb4IUJyD_AkZ2NrK1P4lfwHaBp?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.toshiba.co.jp" },
+                        { name: "Tracing", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.A2XsyTDC11aKi2vUk-wMvwHaD4?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.tracing.com" },
+                        { name: "Trend Micro", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.H7-2eQJBjaicWqFBgE2qswHaCM?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.trendmicro.com" },
+                        { name: "Vast", logoUrl: "https://www.arrow.com/globalecs-media/useolwpw/vast-data-logo.png", url: "https://vast.ai" },
+                        { name: "Veeam", logoUrl: "https://th.bing.com/th/id/OIP.-hSFCbpCmiq22cS50oVTygHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.veeam.com" },
+                        { name: "Versa", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.l7qOEJVi6kgv_gsz6aliJAAAAA?w=320&h=91&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://versa-networks.com" },
+                        { name: "Vertiv", logoUrl: "https://www.worldbusinessoutlook.com/wp-content/uploads/2023/03/Vertiv-logo-1024x576.png", url: "https://www.vertiv.com" },
+                        { name: "VMware", logoUrl: "https://th.bing.com/th/id/OIP.S4JBoZtQIpiuvFEuKMiiswHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.vmware.com" },
+                        { name: "Xfusion", logoUrl: "https://th.bing.com/th/id/OIP.2DEUvapFm8JUTGZwlUdZpgHaA8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.xfusion.com" },
+                        { name: "Xiaomi", logoUrl: "https://th.bing.com/th/id/OIP.kT6aMyLBIQkvOzGsq8QzfAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.mi.com" },
+                        { name: "XP-Pen", logoUrl: "https://www.ask-corp.jp/products/images/xp-pen/xp-pen-logo_02.png", url: "https://www.xp-pen.com" },
+                        { name: "YugabyteDB", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.sExv-5evUp6CNXxxUe6XqQHaA_?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.yugabyte.com" },
+                        { name: "Zebra", logoUrl: "https://th.bing.com/th/id/R.b5b21bf1e4f6affd183dec8203285f22?rik=wtkUzO1nlD9o9A&riu=http%3a%2f%2flofrev.net%2fwp-content%2fphotos%2f2016%2f06%2fzebra-logo-22.png&ehk=WM45QzJ6YT5zpXi2x8KiGfwPmonTjXPXGzH%2fd4PFj%2f0%3d&risl=&pid=ImgRaw&r=0", url: "https://www.zebra.com" },
+                        { name: "Zoom", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.lzbRAHJCIwBVf5su74majAHaB7?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://zoom.us" }
+                    ]
+                }
+            ]
+        };
+        const ProductsSection = () => {
+            return (
+                <section id="products" className="products-section">
+                    <div className="container">
+                        {/* Standardized Section Header */}
+                        <div className="section-header">
+                            <h2 className="section-title" data-translate={productsData.header.titleKey}>
+                                {productsData.header.title}
+                            </h2>
+                            <div className="section-divider"></div>
+                            <p className="section-subtitle" data-translate={productsData.header.subtitleKey}>
+                                {productsData.header.subtitle}
+                            </p>
+                        </div>
 
+                        <div className="products-container">
+
+                            {productsData.sections.map(section => (
+                                <div key={section.id} className="product-layout">
+
+
+                                    {section.type === "partners" && (
+                                        <div className="partner-network-wrapper">
+                                            <div className="brand-partners-grid">
+
+                                                {section.brands.map((brand, i) => (
+                                                    <a
+                                                        key={i}
+                                                        href={brand.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="brand-card-link"
+                                                    >
+                                                        <div className="brand-card-inner">
+                                                            <img
+                                                                src={brand.logoUrl}
+                                                                alt={brand.name}
+                                                                className="brand-logo-img"
+                                                                style={{ maxWidth: '80%', maxHeight: '50px', objectFit: 'contain' }}
+                                                                onError={(e) => {
+
+                                                                    e.target.style.display = 'none';
+                                                                    if (e.target.nextSibling) {
+                                                                        e.target.nextSibling.style.display = 'block';
+                                                                    }
+                                                                }}
+                                                            />
+                                                            <span className="brand-name-fallback" style={{ display: 'none' }}>
+                                                                {brand.name}
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* You can add more logic here for other section types like 'software' or 'services' */}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
         const contactData = {
             header: {
                 title: "Contact Us",
                 titleKey: "contactTitle",
-                subtitle: "Get in touch with us for all your IT needs. We're here to help you succeed.",
+                subtitle: "Your challenges are our priority. Get in touch to experience seamless IT management tailored to your needs.",
                 subtitleKey: "contactSubtitle"
             },
             info: {
@@ -582,7 +2104,7 @@
                         icon: "fas fa-map-marker-alt",
                         heading: "Our Location",
                         headingKey: "contactLocation",
-                        text: "Nasr City, Cairo, Egypt",
+                        text: "RM.202 Arellano Square Blg.9-2 N. Escario Corner Tojong Street, Lahug, Cebu City",
                         textKey: "contactLocationText",
                         link: null
                     },
@@ -590,10 +2112,10 @@
                         icon: "fas fa-phone",
                         heading: "Phone Numbers",
                         headingKey: "contactPhone",
-                        text: "+20 109 536 3315",
+                        text: "09178118907",
                         textKey: null, // not translatable separately? Could be if needed.
                         link: {
-                            href: "https://wa.me/201095363315",
+                            href: "https://wa.me/09178118907",
                             target: "_blank"
                         }
                     },
@@ -601,10 +2123,10 @@
                         icon: "fas fa-envelope",
                         heading: "Email Address",
                         headingKey: "contactEmail",
-                        text: "Info@itcore-eg.com",
+                        text: "admin.office@itcsi.com.ph",
                         textKey: null,
                         link: {
-                            href: "mailto:Info@itcore-eg.com",
+                            href: "mailto:admin.office@itcsi.com.ph",
                             target: null
                         }
                     },
@@ -623,7 +2145,7 @@
                     icon: "fab fa-facebook",
                     text: "Message us on Facebook",
                     textKey: "contactFacebook",
-                    href: "https://www.facebook.com/people/IT-Core/61577376717146/",
+                    href: "https://www.facebook.com/itcoresolutionsinc",
                     target: "_blank",
                     className: "contact-facebook"
                 },
@@ -631,7 +2153,7 @@
                     icon: "fab fa-whatsapp",
                     text: "Chat on WhatsApp",
                     textKey: "contactWhatsapp",
-                    href: "https://wa.me/201095363315",
+                    href: "https://wa.me/09178118907",
                     target: "_blank",
                     className: "contact-whatsapp"
                 },
@@ -639,7 +2161,7 @@
                     icon: "fas fa-phone-alt",
                     text: "Call Us Now",
                     textKey: "contactCall",
-                    href: "tel:+201095363315",
+                    href: "tel:09178118907",
                     target: null,
                     className: "contact-phone"
                 }
@@ -707,16 +2229,16 @@
         //
         const footerData = {
             company: {
-                title: "IT CORE",
+                title: <strong>IT CORE</strong>,
                 description: "Your trusted partner for professional IT solutions. We help businesses secure and optimize their technology infrastructure.",
                 descriptionKey: "footerDesc",
                 socialLinks: [
-                    { href: "https://www.facebook.com/people/IT-Core/61577376717146/", icon: "fab fa-facebook", label: "Facebook" },
+                    { href: "https://www.facebook.com/itcoresolutionsinc", icon: "fab fa-facebook", label: "Facebook" },
                     { href: "https://wa.me/201095363315", icon: "fab fa-whatsapp", label: "WhatsApp" }
                 ]
             },
             services: {
-                title: "Our Services",
+                title: <strong>Our Services</strong>,
                 titleKey: "footerServices",
                 links: [
                     { href: "#services", text: "IT Support", key: "footerService1" },
@@ -726,26 +2248,27 @@
                 ]
             },
             quickLinks: {
-                title: "Quick Links",
+                title: <strong>Quick Links</strong>,
                 titleKey: "footerLinks",
                 links: [
                     { href: "#home", text: "Home", key: "navHome" },
                     { href: "#about", text: "About Us", key: "navAbout" },
                     { href: "#projects", text: "Projects", key: "navProjects" },
+                    { href: "#products", text: "Products", key: "navProducts" },
                     { href: "#contact", text: "Contact", key: "navContact" }
                 ]
             },
             contact: {
-                title: "Contact Info",
+                title: <strong>Contact Info</strong>,
                 titleKey: "footerContact",
                 items: [
-                    { type: "phone", href: "https://wa.me/201095363315", text: "+20 109 536 3315", target: "_blank" },
-                    { type: "email", href: "mailto:Info@itcore-eg.com", text: "Info@itcore-eg.com", target: null },
-                    { type: "address", text: "Nasr City, Cairo, Egypt", key: "contactLocationText" }
+                    { type: "phone", href: "https://wa.me/201095363315", text: "09178118907", target: "_blank" },
+                    { type: "email", href: "mailto:admin.office@itcsi.com.ph", text: "admin.office@itcsi.com.ph", target: null },
+                    { type: "address", text: "RM.202 Arellano Square Bldg.9-2 N. Escario Corner Tojong Street, Lahug, Cebu City", key: "contactLocationText" }
                 ]
             },
             bottom: {
-                copyright: "© 2023 IT Core. All rights reserved. | Professional IT Solutions & Services",
+                copyright: "© 2026 IT Core. All rights reserved. | Professional IT Solutions & Services",
                 copyrightKey: "footerCopyright",
                 links: [
                     { href: "#", text: "Privacy Policy", key: "footerPrivacy" },
@@ -763,12 +2286,28 @@
                                 <p data-translate={footerData.company.descriptionKey}>
                                     {footerData.company.description}
                                 </p>
-                                <div className="footer-social">
-                                    {footerData.company.socialLinks.map((link, index) => (
-                                        <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
-                                            <i className={link.icon}></i>
-                                        </a>
-                                    ))}
+                                <div className="footer-social flex gap-4">
+                                    {footerData.company.socialLinks.map((link, index) => {
+                                        // Detect Facebook by checking if the URL contains 'facebook'
+                                        const isFacebook = link.href.includes('facebook.com');
+
+                                        // Detect WhatsApp by checking if the URL contains 'wa.me' or 'whatsapp'
+                                        const isWhatsApp = link.href.includes('wa.me') || link.href.includes('whatsapp');
+
+                                        return (
+                                            <a
+                                                key={index}
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={link.label}
+                                                // Assigns specific classes based on the link destination
+                                                className={`social-icon ${isFacebook ? 'fb-hover' : ''} ${isWhatsApp ? 'wa-hover' : ''}`}
+                                            >
+                                                <i className={link.icon}></i>
+                                            </a>
+                                        );
+                                    })}
                                 </div>
                             </div>
                             <div className="footer-section">
@@ -826,6 +2365,7 @@
                 <AboutSection />
                 <ServicesSection />
                 <ProjectsSection />
+                <ProductsSection />
                 <ContactSection />
                 <Footer />
             </>);
