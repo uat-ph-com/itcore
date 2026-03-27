@@ -501,16 +501,16 @@
         }
 
         .services-section {
-            background: var(--black);
+            background-color: white;
             padding: 5rem 0
         }
 
         .services-section .container .section-header .section-title {
-            color: #fff;
+            --x-color: #fff;
         }
 
         .services-section .container .section-header .section-subtitle {
-            color: #ffffffb3;
+            --x-color: #ffffffb3;
         }
 
         .services-grid {
@@ -521,18 +521,18 @@
         }
 
         .service-card {
-            background: var(--dark-bg);
-            border: 1px solid #c512124d;
+            background-color: #FFFFFF;
+            border: 1px solid var(--color-white);
             border-radius: 20px;
             padding: 2rem;
             transition: all .3s;
-            box-shadow: 0 15px 40px #0000004d
+            box-shadow: 0 2px 10px gray
         }
 
         .service-card:hover {
             border-color: var(--primary);
             transform: translateY(-10px);
-            box-shadow: 0 25px 60px #c5121266
+            box-shadow: 0 25px 60px white
         }
 
         .service-icon {
@@ -543,17 +543,21 @@
             width: 80px;
             height: 80px;
             margin-bottom: 1.5rem;
-            display: flex
+            display: flex;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .service-icon i {
             color: #fff;
-            font-size: 2rem
+            font-size: 2rem;
+            transition: all 0.3s ease;
         }
 
         .service-icon:hover,
         .service-icon:active {
-            background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+            --x-background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+			background: #2d3436;
             transform: scale(1.1);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
@@ -565,14 +569,14 @@
         }
 
         .service-title {
-            color: #fff;
+            color: #1e293b;
             margin-bottom: 1rem;
             font-size: 1.5rem;
             font-weight: 700
         }
 
         .service-description {
-            color: #ffffffb3;
+            color: #64748b;
             margin-bottom: 1.5rem;
             line-height: 1.6
         }
