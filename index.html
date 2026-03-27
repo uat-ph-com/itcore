@@ -1860,29 +1860,29 @@
             display: flex
         }
 
-        .logo {
+        /* The main container */
+        .nav-content {
+            display: flex;
             align-items: center;
-            gap: .75rem;
-            display: flex
+            justify-content: space-between;
+            padding: 10px 40px;
         }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
 
         .logo-image {
-            object-fit: cover;
-            border: 2px solid var(--primary);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px
-        }
-
-        .logo-text {
-            flex-direction: column;
-            display: flex
-        }
-
-        .logo-name {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 700
+            height: 60px;
+            width: auto;
+            mix-blend-mode: multiply;
+            display: block;
+            align-items: center;
         }
 
         .logo-subtitle {
@@ -1895,21 +1895,21 @@
             display: flex
         }
 
-        /* Keep your original style for both */
+
         .social-links a {
             font-size: 1.2rem;
             transition: color 0.3s ease;
         }
 
-        /* Target them by the new classes you added in the script */
+
         .facebook-link {
             color: #1877F2 !important;
-            /* Facebook Blue */
+
         }
 
         .whatsapp-link {
             color: #25D366 !important;
-            /* WhatsApp Green */
+
         }
 
         .menu-toggle {
@@ -1949,6 +1949,7 @@
                 display: flex !important
             }
 
+
             .nav-menu.show {
                 flex-direction: unset;
                 background: unset;
@@ -1976,16 +1977,16 @@
             position: absolute;
             inset: 0;
             visibility: hidden;
-            pointer-events: none; /* Hindi maki-click ang link kung hindi active */
-           transition: opacity 0.5s ease
+            pointer-events: none;
+            transition: opacity 0.5s ease
         }
 
         .slide.active {
             opacity: 1;
             visibility: visible;
-           pointer-events: auto
+            pointer-events: auto
         }
-      
+
 
 
 
@@ -2014,13 +2015,9 @@
             padding: 0 5%;
             font-size: 0.95rem;
             max-width: 900px;
-            /* Wider width allows more words on one line */
             line-height: 1.4;
-            /* Prevents the text from stretching too wide on big screens */
             margin: 0 auto 1.5rem auto;
-            /* auto left/right keeps it centered */
             text-align: center;
-            /* Centers the text block and adds space above the button */
             color: rgba(255, 255, 255, 0.85);
             font-weight: 400;
             display: flex;
@@ -2336,7 +2333,7 @@
         }
 
         .project-title {
-            color:  #434854;
+            color: #434854;
             margin-bottom: 1rem;
             font-size: 1.3rem;
             font-weight: 700
@@ -2362,6 +2359,94 @@
             padding: .3rem .8rem;
             font-size: .8rem;
             font-weight: 600
+        }
+
+        /* productdata & section */
+        .products-section {
+            padding: 80px 10%;
+            background-color: #ffffff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: #008080;
+            /* Teal Accent */
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: #636e72;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+       
+        .partner-grid-label {
+            font-size: 1.1rem;
+            color: #b2bec3;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        
+        .brand-partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+
+        .brand-card-inner {
+            background: #ffffff;
+            border-radius: 16px;
+           
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+         
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .brand-card-link:hover .brand-card-inner {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: #ff8a71;
+            
+        }
+
+       
+        .brand-logo-img {
+            max-width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+            filter: grayscale(20%);
+            /* Optional: cleaner look */
+        }
+
+        .brand-name-fallback {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #444;
+            text-align: center;
         }
 
         .contact-section {
@@ -2658,7 +2743,7 @@
             display: flex
         }
 
-       
+
 
         .footer-social a.social-icon {
             color: darkslategray;
@@ -2670,14 +2755,14 @@
 
         .footer-social a.fb-hover:hover {
             color: #1877F2 !important;
-            transform: translateY(-3px); 
+            transform: translateY(-3px);
             filter: drop-shadow(0 4px 6px rgba(24, 119, 242, 0.3));
         }
 
 
 
         .footer-social a.wa-hover:hover {
-            color: #25D366 !important; 
+            color: #25D366 !important;
             transform: translateY(-3px);
             filter: drop-shadow(0 4px 6px rgba(37, 211, 102, 0.4));
         }
@@ -2690,6 +2775,7 @@
         #about,
         #services,
         #projects,
+        #products,
         #contact,
         .footer {
             --background: grey;
@@ -2710,17 +2796,14 @@
             logo: {
                 //image: "https://i.postimg.cc/FztCXZhr/Whats-App-Image-2025-10-04-at-1-59-02-AM.jpg",
                 image: "https://uat-ph-com.github.io/itcore/IMG_8210.jpeg",
-                alt: "IT Core Logo",
-                name: "IT SHORE",
-                nameKey: "logoName",
-                subtitle: "Professional IT Solutions",
-                subtitleKey: "logoSubtitle"
+
             },
             navItems: [
                 { href: "#home", text: "Home", key: "navHome" },
                 { href: "#about", text: "About Us", key: "navAbout" },
                 { href: "#services", text: "Services", key: "navServices" },
                 { href: "#projects", text: "Projects", key: "navProjects" },
+                { href: "#products", text: "Products", key: "navProducts" },
                 { href: "#contact", text: "Contact", key: "navContact" }
             ],
 
@@ -2773,10 +2856,6 @@
                                     </a>
                                 ))}
                             </div>
-                            {/* <button className="lang-toggle">
-                        <i className="fas fa-language"></i>
-                        <span id="langText">عربي</span>
-                    </button> */}
                             <button className="menu-toggle" onClick={onMenuTogglePressed}>
                                 <i className="fas fa-bars"></i>
                             </button>
@@ -2793,7 +2872,7 @@
                 alt: "IT Solutions",
                 title: [
                     { text: "Welcome to ", highlight: false, translationKey: "hero1Title1" },
-                    { text: "IT Core", highlight: true, translationKey: "hero1Title2" }
+                    { text: "ITCore", highlight: true, translationKey: "hero1Title2" }
                 ],
                 description: "We provide a foundation of proactive technology, allowing your business to drive innovation and increase productivity, without interruption.",
                 descriptionKey: "hero1Desc",
@@ -2827,7 +2906,7 @@
                 descriptionKey: "hero3Desc",
                 buttonText: "Our Projects",
                 buttonKey: "hero3Btn",
-                buttonLink:  " #projects",
+                buttonLink: " #projects",
             }
         ];
         const Hero = () => {
@@ -2846,65 +2925,64 @@
                 setCurrentSlide(index);
             };
 
-          return (
-                    <div id="home" className="hero-slider">
-                        {heroSlides.map((slide, index) => (
-                            <div key={slide.id} className={`slide ${index === currentSlide ? 'active' : ''}`}>
-                                <img className="slide-image" src={slide.image} alt={slide.alt} />
-                                <div className="slide-overlay"></div>
-                                <div className="slide-content">
-                                    <div className="slide-inner">
-                                        <div className="slide-text">
-                                            <h1 className="slide-title">
-                                                {slide.title.map((part, i) => (
-                                                    <span
-                                                        key={i}
-                                                        className={part.highlight ? 'highlight' : ''}
-                                                        data-translate={part.translationKey}
-                                                    >
-                                                        {part.text}
-                                                    </span>
-                                                ))}
-                                            </h1>
-                                            <p className="slide-description" data-translate={slide.descriptionKey}>
-                                                {slide.description}
-                                            </p>
-                                            
-                                            {/* FIX: Pinalitan ang <button> ng <a> tag para sa tamang scroll navigation */}
-                                          <a 
-                                            href={slide.buttonLink} 
-                                            className="btn-primary" 
-                                            onClick={(e) => console.log("Target Link:", slide.buttonLink)} // Check natin sa console kung ano talaga ang naki-click
+            return (
+                <div id="home" className="hero-slider">
+                    {heroSlides.map((slide, index) => (
+                        <div key={slide.id} className={`slide ${index === currentSlide ? 'active' : ''}`}>
+                            <img className="slide-image" src={slide.image} alt={slide.alt} />
+                            <div className="slide-overlay"></div>
+                            <div className="slide-content">
+                                <div className="slide-inner">
+                                    <div className="slide-text">
+                                        <h1 className="slide-title">
+                                            {slide.title.map((part, i) => (
+                                                <span
+                                                    key={i}
+                                                    className={part.highlight ? 'highlight' : ''}
+                                                    data-translate={part.translationKey}
+                                                >
+                                                    {part.text}
+                                                </span>
+                                            ))}
+                                        </h1>
+                                        <p className="slide-description" data-translate={slide.descriptionKey}>
+                                            {slide.description}
+                                        </p>
+
+                                        <a
+                                            href={slide.buttonLink}
+                                            className="btn-primary"
+                                            onClick={(e) => console.log("Target Link:", slide.buttonLink)}
                                         >
                                             {slide.buttonText}
                                         </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        ))}
-
-                        {/* Navigation Arrows */}
-                        <button className="slider-arrow prev" onClick={() => changeSlide(-1)}>
-                            <i className="fas fa-chevron-left"></i>
-                        </button>
-                        <button className="slider-arrow next" onClick={() => changeSlide(1)}>
-                            <i className="fas fa-chevron-right"></i>
-                        </button>
-
-                        {/* Slider Dots */}
-                        <div className="slider-dots">
-                            {heroSlides.map((_, index) => (
-                                <button
-                                    key={index}
-                                    className={`dot ${index === currentSlide ? 'active' : ''}`}
-                                    onClick={() => goToSlide(index)}
-                                />
-                            ))}
                         </div>
+                    ))}
+
+
+                    <button className="slider-arrow prev" onClick={() => changeSlide(-1)}>
+                        <i className="fas fa-chevron-left"></i>
+                    </button>
+                    <button className="slider-arrow next" onClick={() => changeSlide(1)}>
+                        <i className="fas fa-chevron-right"></i>
+                    </button>
+
+
+                    <div className="slider-dots">
+                        {heroSlides.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`dot ${index === currentSlide ? 'active' : ''}`}
+                                onClick={() => goToSlide(index)}
+                            />
+                        ))}
                     </div>
-                );
-                        };
+                </div>
+            );
+        };
 
 
         //
@@ -3153,9 +3231,9 @@
                 subtitleKey: "projectsSubtitle"
             },
             projects: [
-             {
+                {
                     id: 1,
-                    image: "https://tse4.mm.bing.net/th/id/OIP.mFYZ46wq3lXfFnvKuGgShwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3 " ,
+                    image: "https://tse4.mm.bing.net/th/id/OIP.mFYZ46wq3lXfFnvKuGgShwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3 ",
                     alt: "Integrated POS & Retail Infrastructure",
                     title: "High-traffic Retail POS Deployment. ",
                     titleKey: "project2Title",
@@ -3165,8 +3243,8 @@
                         { text: "Network & Infra Design", key: "project2Tag1" },
                         { text: "Point of Sale", key: "project2Tag2" },
                         { text: "Software & Hardware Integration.", key: "project2Tag3" }
-                    ]  
-            },
+                    ]
+                },
                 {
                     id: 2,
                     image: "https://scontent.fceb9-1.fna.fbcdn.net/v/t1.6435-9/87612574_611467772735234_4195792764513812480_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFz313Mxw_utXlW6vLTtl0BeaMqEzkdneF5oyoTOR2d4fDvwVI7p0YXHtMvKjKRKja40sehEKqaO3Qrb0UjdBsz&_nc_ohc=7G4Bb2Tq0XwQ7kNvwE9s25i&_nc_oc=AdoXBem94fB2OiJDwO0xx_IDRe7fkFBYPQFPxoLewOvlJhUXY-poGqtpGc2oQuZDeQc&_nc_zt=23&_nc_ht=scontent.fceb9-1.fna&_nc_gid=buP9RtDPN-vnCdo82CjcNA&_nc_ss=7a32e&oh=00_Afyh58Br-l_fQDwbzD-YMzJGPeq9sdGzQCfOFkPO1Uj2qQ&oe=69E9BDA9",
@@ -3179,7 +3257,7 @@
                         { text: " Cloud Dev", key: "project2Tag1" },
                         { text: "Data Migration", key: "project2Tag2" },
                         { text: "Operating System", key: "project2Tag3" }
-                    ]  
+                    ]
                 },
                 {
                     id: 3,
@@ -3193,8 +3271,8 @@
                         { text: "Network Security", key: "project3Tag1" },
                         { text: "Endpoint Protection", key: "project3Tag2" },
                         { text: "CCTV", key: "project3Tag3" }
-                    ] 
-                    },
+                    ]
+                },
                 {
                     id: 4,
                     image: "https://tse4.mm.bing.net/th/id/OIF.Hsyt7SReg7UuXEBakjfeQw?rs=1&pid=ImgDetMain&o=7&rm=3",
@@ -3209,7 +3287,7 @@
                         { text: " Web App", key: "project4Tag3" }
                     ]
                 }
-                
+
             ]
         };
         const ProjectsSection = () => {
@@ -3254,8 +3332,199 @@
                 </section>
             );
         };
-        //
+        //* products*//
+        const productsData = {
+            header: {
+                title: "Our Products",
+                subtitle: "Innovative software solutions and world-class hardware partnerships designed to streamline your business operations.",
+                titleKey: "productsTitle",
+                subtitleKey: "productsSubtitle"
+            },
+            sections: [
+                {
+                    id: 1,
+                    type: "partners",
+                    brands: [
+                        { name: "Acer", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.-XzNDVyLX6wLgTWwJtIi-gHaED?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.acer.com" },
+                        { name: "Acerpure", logoUrl: "https://cdn.manilastandard.net/wp-content/uploads/2023/10/Acerpure.webp", url: "https://www.acerpure.com" },
+                        { name: "Adobe", logoUrl: "https://cdn.freelogovectors.net/wp-content/uploads/2023/05/adobe-logo-02-freelogovectors.net_.png", url: "https://www.adobe.com" },
+                        { name: "Advance.AI", logoUrl: "https://website-static.advancegroup.com.cn/img/advance_ai_logo2.abbfefe.png", url: "https://web.advance.ai" },
+                        { name: "Allied Telesis", logoUrl: "https://cdn.freebiesupply.com/logos/thumbs/2x/allied-telesis-logo.png", url: "https://www.alliedtelesis.com" },
+                        { name: "APC", logoUrl: "https://www.accu-tech.com/hs-fs/hubfs/APC%20SE%20Logo-1.jpeg?width=5692&height=3200&name=APC%20SE%20Logo-1.jpeg", url: "https://www.apc.com" },
+                        { name: "Apple", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg", url: "https://www.apple.com" },
+                        { name: "Arista", logoUrl: "https://www.arista.com/assets/images/logo/Arista_Logo.png", url: "https://www.arista.com" },
+                        { name: "Asus", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg", url: "https://www.asus.com" },
+                        { name: "Audiocodes", logoUrl: "https://logodix.com/logo/1710625.jpg", url: "https://www.audiocodes.com" },
+                        { name: "Aukey", logoUrl: "https://manuals.plus/wp-content/uploads/2022/03/AUKEY-logo.jpg", url: "https://www.aukey.com" },
+                        { name: "Autodesk", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.U7cNxhSj_QMDmE5S8Gv9pwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.autodesk.com" },
+                        { name: "Automation Anywhere", logoUrl: "https://logodix.com/logo/957450.png", url: "https://www.automationanywhere.com" },
+                        { name: "Avaya", logoUrl: "https://th.bing.com/th/id/R.70e12d90b3c0ae4fd1fabc8feb3b97fa?rik=WG2L1S6Bmwibsg&riu=http%3a%2f%2fwww.trcnetworks.com%2fsites%2fdefault%2ffiles%2fimages%2favaya_logo.jpg&ehk=dimpmWX%2bISuXXGdtKzphpwQGkoirPaSsXpmd3%2bubFiQ%3d&risl=&pid=ImgRaw&r=0", url: "https://www.avaya.com" },
+                        { name: "AWS", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg", url: "https://aws.amazon.com" },
+                        { name: "Canon", logoUrl: "https://fastpng.com/images/file/canon-logo-png-1109-x-241-nps8y7jnmqxy9n0j.png", url: "https://global.canon" },
+                        { name: "Choetech", logoUrl: "https://i.pinimg.com/originals/c4/fd/a1/c4fda1b2ba33f54c3f0723e575c33ac9.jpg", url: "https://choetech.com" },
+                        { name: "Cisco", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg", url: "https://www.cisco.com" },
+                        { name: "Cisco Meraki", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.Hup6OHzkOfV52wo4-Bi0GAHaBc?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://meraki.cisco.com" },
+                        { name: "Cloudera", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.0uOzX7kVq95duJ123DTIhgHaA5?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.cloudera.com" },
+                        { name: "Cohesity", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.FrqRnZt6cvpQ9mw-618-1QHaBF?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.cohesity.com" },
+                        { name: "Commvault", logoUrl: "https://appexchange.salesforce.com/image_host/c32e6dad-1b3d-4eda-9e99-cfda05d93d8b.png", url: "https://www.commvault.com" },
+                        { name: "CyberPower", logoUrl: "https://manuals.plus/wp-content/uploads/2023/09/CyberPower-Logo-4.png", url: "https://www.cyberpowersystems.com" },
+                        { name: "Dahua", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.QSCn2bB-yORC4WLIV8vUYwHaCN?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.dahuasecurity.com" },
+                        { name: "Delinea", logoUrl: "https://th.bing.com/th/id/OIP.XjLnrTlifY_UNNGo32_rcgHaBr?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://delinea.com" },
+                        { name: "Dell", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg", url: "https://www.dell.com" },
+                        { name: "Dell Technologies", logoUrl: "https://pixelbag.net/wp-content/uploads/2022/10/dell-technologies-vector-logo.jpg", url: "https://www.delltechnologies.com" },
+                        { name: "D-Link", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.KG851LipyQHtusGxo8HPjAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.dlink.com" },
+                        { name: "Docusign", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.6Jw3lb7WgaaycCR1rvL2XwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.docusign.com" },
+                        { name: "Eaton", logoUrl: "https://th.bing.com/th/id/OIP.aEFTZXrwe_n3mlfBR_G0yQHaB_?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.eaton.com" },
+                        { name: "Elastic", logoUrl: "https://th.bing.com/th/id/OIP.lb1-INWjwFekdSoBnObEmAHaCi?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.elastic.co" },
+                        { name: "Extreme Networks", logoUrl: "https://www.forwardnetworks.com/wp-content/uploads/2023/08/extreme-networks-2.jpg", url: "https://www.extremenetworks.com" },
+                        { name: "FiberHome", logoUrl: "https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/3c2928b6dc68140ba9f3", url: "https://www.fiberhome.com" },
+                        { name: "Forcepoint", logoUrl: "https://www.c5technology.com.au/wp-content/uploads/2020/09/Forcepoint-logo-800x153.png", url: "https://www.forcepoint.com" },
+                        { name: "Formlabs", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.Zurdbj-dH5qx3pWh1MJklwHaBE?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://formlabs.com" },
+                        { name: "Fortinet", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.GX28AZldXM5N3aefkyQqZQHaA7?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.fortinet.com" },
+                        { name: "Fujifilm", logoUrl: "https://th.bing.com/th/id/OIP.17VGylOS3hzPUQXDoOiNEgHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.fujifilm.com" },
+                        { name: "Fusionsolar", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.mcDcmrwbiaWO-M7Q2pZsyAHaD3?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://solar.huawei.com" },
+                        { name: "Go Cloud", logoUrl: "https://media.licdn.com/dms/image/v2/C4D0BAQGVLVtMedt_1w/company-logo_200_200/company-logo_200_200/0/1630474596571/go_cloud_inc_logo?e=2147483647&v=beta&t=QHwAR5WBtFHazgfMQxy6R4hAVraZfeWEzkHeFccY-tA", url: "https://gocloud.ph" },
+                        { name: "Google Cloud", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.EX9YrIowZx7uzzFY6FsCMQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://cloud.google.com" },
+                        { name: "H3C", logoUrl: "https://media.licdn.com/dms/image/v2/C560BAQGjlYDF9o3YdA/company-logo_200_200/company-logo_200_200/0/1679549078857/h3c_technologies_co_ltd_logo?e=2147483647&v=beta&t=ffSEKoGKdPRsW5VwAsPAD3j8S3KI360Rksc4N8Rbh58", url: "https://www.h3c.com" },
+                        { name: "Hexnode", logoUrl: "https://www.rasinfotech-dubai.com/wp-content/uploads/2024/05/Hexnode-logo-with-white-background1-1536x517.png", url: "https://www.hexnode.com" },
+                        { name: "Hitachi Vantara", logoUrl: "https://s7d9.scene7.com/is/image/hitachivantara/data-center-transformation-sustainability-hv-case-study-logo?fmt=webp", url: "https://www.hitachivantara.com" },
+                        { name: "Hokowits", logoUrl: "https://resources.holowits.com/news/d2a2cbe1237a4f7a9b45fa6dc196d525.png", url: "https://www.hokowits.com" },
+                        { name: "Honeywell", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.pW_sMKgLQwJA--e378EfnwHaDt?w=666&h=333&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.honeywell.com" },
+                        { name: "HP", logoUrl: "https://i0.wp.com/upfonts.com/wp-content/uploads/2019/09/HP-Logo.png", url: "https://www.hp.com" },
+                        { name: "HP & Poly", logoUrl: "https://cdn.mos.cms.futurecdn.net/eTVjVAbgzyN5AyPxMqaaPA-320-80.png", url: "https://www.hp&poly.com" },
+                        { name: "Hewlette Packard Enterprise", logoUrl: "https://cdn.cs.1worldsync.com/b6/17/b6175fe4-e902-4f8f-bd73-594aa21e6c91.jpg", url: "https://www.hewlettepackardenterprise.com" },
+                        { name: "HPE Aruba", logoUrl: "https://dec.vn/wp-content/uploads/2023/09/HPEAruba.png", url: "https://www.arubanetworks.com" },
+                        { name: "HPE SimpliVity", logoUrl: "https://www.storagereview.com/wp-content/uploads/2019/10/1-HPE_logo_SimpliVity_1.jpg" , url: "https://www.hpe.com/info/simplivity" },
+                        { name: "Huawei", logoUrl: "https://www.freepnglogos.com/uploads/huawei-logo-png/huawei-logo-png-hd-0.png", url: "https://www.huawei.com" },
+                        { name: "Huawei eKit", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.zfHCxrBOkKAkm1n08DgnogHaCa?w=3339&h=1091&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://ekit.huawei.com" },
+                        { name: "HyperX", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.bDMDSr_90yzPoj5quObIVwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://hyperx.com" },
+                        { name: "Hytera", logoUrl: "https://th.bing.com/th/id/OIP.DNfuqpuW9Vru8X4id2_15wHaDD?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.hytera.com" },
+                        { name: "IBM", logoUrl: "https://syndelltech.com/wp-content/uploads/2023/02/IBM-Watson-Studio-Logo.png", url: "https://www.ibm.com" },
+                        { name: "iBoss", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.xwmOOHTPz8X5m74jKafRyAHaCB?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.iboss.com" },
+                        { name: "Informatica", logoUrl: "https://companieslogo.com/img/orig/INFA_BIG-13006792.png?t=1636076858", url: "https://www.informatica.com" },
+                        { name: "Juniper Networks", logoUrl: "https://news-cdn.softpedia.com/images/news2/Juniper-Warns-of-Critical-Vulnerability-in-Its-Routers-2.jpg", url: "https://www.juniper.net" },
+                        { name: "Kaspersky", logoUrl: "https://content.kaspersky-labs.com/se/ru/content/ru-ru/images/homepage/kaspersky-logotype-green/kaspersky-logotype-green.png", url: "https://www.kaspersky.com" },
+                        { name: "Kodak Alaris", logoUrl: "https://th.bing.com/th/id/OIP.AqayfTUfs1gafb8AheqvBQHaBV?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.alarisworld.com" },
+                        { name: "Lenovo", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.bA1bZVbwO4t8hiXwqLLKkAHaBh?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.lenovo.com" },
+                        { name: "LG", logoUrl: "https://th.bing.com/th/id/R.a8a655ee926daaff53a7e98fff27f2e9?rik=%2bHZnveegkBfayg&riu=http%3a%2f%2fpngimg.com%2fuploads%2flg_logo%2flg_logo_PNG15.png&ehk=04d34z32I95izfs%2b6b%2bh8Iq6hnex%2bx7nUJ6i5Jw5%2flM%3d&risl=&pid=ImgRaw&r=0", url: "https://www.lg.com" },
+                        { name: "Menlo Security", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.tzMO1KSUSOnIR5M8zXfGAAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.menlosecurity.com" },
+                        { name: "Microsoft", logoUrl: "https://th.bing.com/th/id/OIP.qbsTDbB9qKP6pBQ0Rl9bpQHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.microsoft.com" },
+                        { name: "Microsoft Azure", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.VleZRz5eT_sdNrs7X8BADAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://azure.microsoft.com" },
+                        { name: "Microsoft Surface", logoUrl: "https://www.xma.co.uk/wp-content/uploads/2020/02/Microsoft-Surface-Logo.png", url: "https://www.microsoft.com/surface" },
+                        { name: "Neat", logoUrl: "https://namlongtelecom.vn/wp-content/uploads/2022/11/logo-neat.png", url: "https://neat.no" },
+                        { name: "NetApp", logoUrl: "https://companieslogo.com/img/orig/NTAP_BIG-15a3bf5f.png?t=1648747418", url: "https://www.netapp.com" },
+                        { name: "Newline", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.AcPd9xCK7eWC8RoynrS44gHaDt?w=1000&h=500&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://newline-interactive.com" },
+                        { name: "Nintendo Switch", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.ujP1CVLOujVJgfED4oswCgAAAA?w=262&h=280&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.nintendo.com/switch" },
+                        { name: "Nutanix", logoUrl: "https://companieslogo.com/img/orig/NTNX_BIG-5e61fe7f.png?t=1684168521&download=true", url: "https://www.nutanix.com" },
+                        { name: "Nvidia", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.ERB5mIkFOxAt2WnK7HP8yQHaFd?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.nvidia.com" },
+                        { name: "Omnissa", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.vChJhcgeGg8uTPhtAtUtPgHaCe?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.omnissa.com" },
+                        { name: "Opentext", logoUrl: "https://th.bing.com/th/id/OIP.X9BZSn0-MGGQ3Ojl5mrzRAHaBa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.opentext.com" },
+                        { name: "Oppo", logoUrl: "https://pluspng.com/img-png/oppo-logo-png-oppo-logo-and-symbol-meaning-history-png-1920x1080.png", url: "https://www.oppo.com" },
+                        { name: "Oracle", logoUrl: "https://www.pngmart.com/files/23/Oracle-Logo-PNG-Image.png", url: "https://www.oracle.com" },
+                        { name: "Panasonic", logoUrl: "https://pluspng.com/img-png/panasonic-logo-png-panasonic-logo-transparent-png-pluspng-2507x512.png", url: "https://holdings.panasonic" },
+                        { name: "Panduit", logoUrl: "https://www.liblogo.com/img-logo/pa8174pfaa-panduit-logo-panduit-logo.png", url: "https://www.panduit.com" },
+                        { name: "Perle", logoUrl: "https://cdn.cs.1worldsync.com/16/52/16525809-0e7d-429d-9fcf-e541edea1d3a.jpg", url: "https://www.perle.com" },
+                        { name: "QNAP", logoUrl: "https://www.liblogo.com/img-logo/qn3822l51c-qnap-logo-logo-qnap-marketing-resource.png", url: "https://www.qnap.com" },
+                        { name: "Realme", logoUrl: "https://static.vecteezy.com/system/resources/previews/022/101/087/original/realme-logo-transparent-free-png.png", url: "https://www.realme.com" },
+                        { name: "Red Hat", logoUrl: "https://www.liblogo.com/img-logo/re3075rdd5-red-hat-logo-red-hat--org.png", url: "https://www.redhat.com" },
+                        { name: "Re-Hx", logoUrl: "https://www.imda.gov.sg/-/media/imda/images/content/for-industry/technology-and-innovation/innovative-tech-companies/sgd-spark/ren3-logo.webp", url: "https://www.re-hx.com" },
+                        { name: "Riverbed", logoUrl: "https://www.riverbed.com/riverbed-wp-content/themes/riverbed/dist/images/header/riverbed-logo.png", url: "https://www.riverbed.com" },
+                        { name: "RSA", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.jNip43XgRChGBIDsn_NP0QHaCm?w=1066&h=374&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.rsa.com" },
+                        { name: "Rubrik", logoUrl: "https://th.bing.com/th/id/OIP.YwOP69hotF4RK3zH-n9KvAHaCH?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.rubrik.com" },
+                        { name: "Samsung", logoUrl: "https://th.bing.com/th/id/OIP.JR-XVFg4MGmR90sirZza9AHaCf?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.samsung.com" },
+                        { name: "SAS", logoUrl: "https://cdn.freebiesupply.com/logos/thumbs/2x/sas-6-logo.png", url: "https://www.sas.com" },
+                        { name: "Seagate", logoUrl: "https://th.bing.com/th/id/OIP.VuKxlvYOWJj7y9XmAs5O-QHaE7?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.seagate.com" },
+                        { name: "Segway-Ninebot",logoUrl: "https://tse4.mm.bing.net/th/id/OIP.NInHfCoLDzIIerd9IqCF9gHaB2?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://b2b.segway.com" },
+                        { name: "SonicWall", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.Ab_6umaEOm42XjsKR-XG7AHaEH?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.sonicwall.com" },
+                        { name: "Stellar Cyber", logoUrl: "https://tse1.mm.bing.net/th/id/OIP.esKyFLl8Ok-xBkG-g76R5QHaBa?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://stellarcyber.ai" },
+                        { name: "Sunmi", logoUrl: "https://th.bing.com/th/id/OIP.72M5VMahh7_hBoiEmLiTKwHaBa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.sunmi.com" },
+                        { name: "Sunra", logoUrl: "https://sunra.cl/cdn/shop/files/Logo_Sunra_Chile.png?v=1702583473", url: "https://www.sunraev.com" },
+                        { name: "Supermicro", logoUrl: "https://th.bing.com/th?id=OIF.5u78kQJAchVhB%2b6Jb6te1A&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.supermicro.com" },
+                        { name: "Suse", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.Kp6ZvXfookTFYrQmixC9MAHaGy?w=736&h=675&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.suse.com" },
+                        { name: "Synology", logoUrl: "https://www.synology.com/img/company/branding/synology_logo.jpg", url: "https://www.synology.com" },
+                        { name: "Toshiba", logoUrl: "https://th.bing.com/th/id/OIP.kb4IUJyD_AkZ2NrK1P4lfwHaBp?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.toshiba.co.jp" },
+                        { name: "Tracing", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.A2XsyTDC11aKi2vUk-wMvwHaD4?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.tracing.com" },
+                        { name: "Trend Micro", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.H7-2eQJBjaicWqFBgE2qswHaCM?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.trendmicro.com" },
+                        { name: "Vast", logoUrl: "https://www.arrow.com/globalecs-media/useolwpw/vast-data-logo.png", url: "https://vast.ai" },
+                        { name: "Veeam", logoUrl: "https://th.bing.com/th/id/OIP.-hSFCbpCmiq22cS50oVTygHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.veeam.com" },
+                        { name: "Versa", logoUrl: "https://tse2.mm.bing.net/th/id/OIP.l7qOEJVi6kgv_gsz6aliJAAAAA?w=320&h=91&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://versa-networks.com" },
+                        { name: "Vertiv", logoUrl: "https://www.worldbusinessoutlook.com/wp-content/uploads/2023/03/Vertiv-logo-1024x576.png", url: "https://www.vertiv.com" },
+                        { name: "VMware", logoUrl: "https://th.bing.com/th/id/OIP.S4JBoZtQIpiuvFEuKMiiswHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.vmware.com" },
+                        { name: "Xfusion", logoUrl: "https://th.bing.com/th/id/OIP.2DEUvapFm8JUTGZwlUdZpgHaA8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.xfusion.com" },
+                        { name: "Xiaomi", logoUrl: "https://th.bing.com/th/id/OIP.kT6aMyLBIQkvOzGsq8QzfAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.mi.com" },
+                        { name: "XP-Pen", logoUrl: "https://www.ask-corp.jp/products/images/xp-pen/xp-pen-logo_02.png", url: "https://www.xp-pen.com" },
+                        { name: "YugabyteDB", logoUrl: "https://tse3.mm.bing.net/th/id/OIP.sExv-5evUp6CNXxxUe6XqQHaA_?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://www.yugabyte.com" },
+                        { name: "Zebra",logoUrl: "https://th.bing.com/th/id/R.b5b21bf1e4f6affd183dec8203285f22?rik=wtkUzO1nlD9o9A&riu=http%3a%2f%2flofrev.net%2fwp-content%2fphotos%2f2016%2f06%2fzebra-logo-22.png&ehk=WM45QzJ6YT5zpXi2x8KiGfwPmonTjXPXGzH%2fd4PFj%2f0%3d&risl=&pid=ImgRaw&r=0", url: "https://www.zebra.com" },
+                        { name: "Zoom", logoUrl: "https://tse4.mm.bing.net/th/id/OIP.lzbRAHJCIwBVf5su74majAHaB7?rs=1&pid=ImgDetMain&o=7&rm=3", url: "https://zoom.us" }
+                    ]
+                }
+            ]
+        };
+        const ProductsSection = () => {
+            return (
+                <section id="products" className="products-section">
+                    <div className="container">
+                        {/* Standardized Section Header */}
+                        <div className="section-header">
+                            <h2 className="section-title" data-translate={productsData.header.titleKey}>
+                                {productsData.header.title}
+                            </h2>
+                            <div className="section-divider"></div>
+                            <p className="section-subtitle" data-translate={productsData.header.subtitleKey}>
+                                {productsData.header.subtitle}
+                            </p>
+                        </div>
 
+                        <div className="products-container">
+                            
+                            {productsData.sections.map(section => (
+                                <div key={section.id} className="product-layout">
+
+                                    
+                                    {section.type === "partners" && (
+                                        <div className="partner-network-wrapper">
+                                            <div className="brand-partners-grid">
+
+                                                {section.brands.map((brand, i) => (
+                                                    <a
+                                                        key={i}
+                                                        href={brand.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="brand-card-link"
+                                                    >
+                                                        <div className="brand-card-inner">
+                                                            <img
+                                                                src={brand.logoUrl}
+                                                                alt={brand.name}
+                                                                className="brand-logo-img"
+                                                                style={{ maxWidth: '80%', maxHeight: '50px', objectFit: 'contain' }}
+                                                                onError={(e) => {
+
+                                                                    e.target.style.display = 'none';
+                                                                    if (e.target.nextSibling) {
+                                                                        e.target.nextSibling.style.display = 'block';
+                                                                    }
+                                                                }}
+                                                            />
+                                                            <span className="brand-name-fallback" style={{ display: 'none' }}>
+                                                                {brand.name}
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* You can add more logic here for other section types like 'software' or 'services' */}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
         const contactData = {
             header: {
                 title: "Contact Us",
@@ -3398,7 +3667,7 @@
         //
         const footerData = {
             company: {
-                title:<strong> IT CORE</strong>,
+                title: <strong> IT CORE</strong>,
                 description: "Your trusted partner for professional IT solutions. We help businesses secure and optimize their technology infrastructure.",
                 descriptionKey: "footerDesc",
                 socialLinks: [
@@ -3417,12 +3686,13 @@
                 ]
             },
             quickLinks: {
-                title:<strong>Quick Links</strong> ,
+                title: <strong>Quick Links</strong>,
                 titleKey: "footerLinks",
                 links: [
                     { href: "#home", text: "Home", key: "navHome" },
                     { href: "#about", text: "About Us", key: "navAbout" },
                     { href: "#projects", text: "Projects", key: "navProjects" },
+                    { href: "#products", text: "Products", key: "navProducts" },
                     { href: "#contact", text: "Contact", key: "navContact" }
                 ]
             },
@@ -3454,20 +3724,20 @@
                                 <p data-translate={footerData.company.descriptionKey}>
                                     {footerData.company.description}
                                 </p>
-                     <div className="footer-social flex gap-4">
+                                <div className="footer-social flex gap-4">
                                     {footerData.company.socialLinks.map((link, index) => {
                                         // Detect Facebook by checking if the URL contains 'facebook'
                                         const isFacebook = link.href.includes('facebook.com');
-                                        
+
                                         // Detect WhatsApp by checking if the URL contains 'wa.me' or 'whatsapp'
                                         const isWhatsApp = link.href.includes('wa.me') || link.href.includes('whatsapp');
 
                                         return (
-                                            <a 
-                                                key={index} 
-                                                href={link.href} 
-                                                target="_blank" 
-                                                rel="noopener noreferrer" 
+                                            <a
+                                                key={index}
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 aria-label={link.label}
                                                 // Assigns specific classes based on the link destination
                                                 className={`social-icon ${isFacebook ? 'fb-hover' : ''} ${isWhatsApp ? 'wa-hover' : ''}`}
@@ -3533,6 +3803,7 @@
                 <AboutSection />
                 <ServicesSection />
                 <ProjectsSection />
+                <ProductsSection /> {/* Added here */}
                 <ContactSection />
                 <Footer />
             </>);
