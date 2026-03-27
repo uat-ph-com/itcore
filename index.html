@@ -1355,6 +1355,10 @@
     <script type="text/babel">
         const { useCallback, useState, useEffect } = React;
         //
+        const copyrightData = {
+            year: new Date().getFullYear(),
+        };
+        //
         const navData = {
             logo: {
                 //image: "https://i.postimg.cc/FztCXZhr/Whats-App-Image-2025-10-04-at-1-59-02-AM.jpg",
@@ -2268,7 +2272,7 @@
                 ]
             },
             bottom: {
-                copyright: "© 2026 IT Core. All rights reserved. | Professional IT Solutions & Services",
+                copyright: `© ${copyrightData.year} IT Core. All rights reserved. | Professional IT Solutions & Services`,
                 copyrightKey: "footerCopyright",
                 links: [
                     { href: "#", text: "Privacy Policy", key: "footerPrivacy" },
